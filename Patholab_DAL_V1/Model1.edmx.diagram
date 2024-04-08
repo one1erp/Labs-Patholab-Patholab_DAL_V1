@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dfb89f393e7742eda0bbea7a9fd6febf" Name="Diagram1" ZoomLevel="73">
+        <EntityTypeShape EntityType="Model.ADDRESS" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ALIQUOT" Width="1.5" PointX="11.25" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ALIQUOT_USER" Width="1.5" PointX="16.5" PointY="49.125" />
+        <EntityTypeShape EntityType="Model.CLIENT" Width="1.5" PointX="17.25" PointY="73.75" />
+        <EntityTypeShape EntityType="Model.CLIENT_USER" Width="1.5" PointX="19.5" PointY="77.5" />
+        <EntityTypeShape EntityType="Model.INSPECTION_ENTRY" Width="1.5" PointX="3" PointY="49.125" />
+        <EntityTypeShape EntityType="Model.INSPECTION_LOG" Width="1.5" PointX="8.25" PointY="53.875" />
+        <EntityTypeShape EntityType="Model.INSPECTION_PLAN" Width="1.5" PointX="0.75" PointY="42.25" />
+        <EntityTypeShape EntityType="Model.LIMS_GROUP" Width="1.5" PointX="1.5" PointY="33.375" />
+        <EntityTypeShape EntityType="Model.LIMS_ROLE" Width="1.5" PointX="0.75" PointY="49.125" />
+        <EntityTypeShape EntityType="Model.LOCATION" Width="1.5" PointX="9" PointY="67.75" />
+        <EntityTypeShape EntityType="Model.LOCATION_USER" Width="1.5" PointX="11.25" PointY="69.75" />
+        <EntityTypeShape EntityType="Model.OPERATOR" Width="1.5" PointX="3" PointY="53.375" />
+        <EntityTypeShape EntityType="Model.OPERATOR_GROUP" Width="1.5" PointX="5.25" PointY="51.5" />
+        <EntityTypeShape EntityType="Model.PHRASE_ENTRY" Width="1.5" PointX="6" PointY="6" />
+        <EntityTypeShape EntityType="Model.PHRASE_HEADER" Width="1.5" PointX="3.75" PointY="5.5" />
+        <EntityTypeShape EntityType="Model.RESULT" Width="1.5" PointX="24.75" PointY="53.25" />
+        <EntityTypeShape EntityType="Model.SAMPLE" Width="1.5" PointX="19.5" PointY="64" />
+        <EntityTypeShape EntityType="Model.SAMPLE_USER" Width="1.5" PointX="21.75" PointY="66.125" />
+        <EntityTypeShape EntityType="Model.SDG" Width="1.5" PointX="8.25" PointY="58.5" />
+        <EntityTypeShape EntityType="Model.SDG_LOG" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Model.SDG_USER" Width="2.25" PointX="16.5" PointY="61.25" />
+        <EntityTypeShape EntityType="Model.SUPPLIER" Width="1.5" PointX="9" PointY="45" />
+        <EntityTypeShape EntityType="Model.SUPPLIER_USER" Width="1.5" PointX="11.25" PointY="45.75" />
+        <EntityTypeShape EntityType="Model.TEST" Width="1.5" PointX="19.5" PointY="54" />
+        <EntityTypeShape EntityType="Model.TEST_USER" Width="1.5" PointX="21.75" PointY="57.75" />
+        <EntityTypeShape EntityType="Model.U_CLINIC" Width="1.5" PointX="3" PointY="76" />
+        <EntityTypeShape EntityType="Model.U_CLINIC_USER" Width="1.5" PointX="9" PointY="40.375" />
+        <EntityTypeShape EntityType="Model.U_CONTAINER" Width="1.5" PointX="3" PointY="80.875" />
+        <EntityTypeShape EntityType="Model.U_CONTAINER_USER" Width="2.25" PointX="5.25" PointY="59.75" />
+        <EntityTypeShape EntityType="Model.U_CRYSTAL_REPORT" Width="1.5" PointX="3.75" PointY="22.125" />
+        <EntityTypeShape EntityType="Model.U_CRYSTAL_REPORT_USER" Width="2.625" PointX="13.5" PointY="18.25" />
+        <EntityTypeShape EntityType="Model.U_CUSTOMER" Width="1.5" PointX="3.75" PointY="26.125" />
+        <EntityTypeShape EntityType="Model.U_CUSTOMER_USER" Width="1.5" PointX="14" PointY="44.75" />
+        <EntityTypeShape EntityType="Model.U_DEBIT" Width="1.5" PointX="3.75" PointY="34.75" />
+        <EntityTypeShape EntityType="Model.U_DEBIT_USER" Width="1.5" PointX="27.625" PointY="63.625" />
+        <EntityTypeShape EntityType="Model.U_ORDER" Width="1.5" PointX="14.25" PointY="64.75" />
+        <EntityTypeShape EntityType="Model.U_ORDER_USER" Width="1.5" PointX="22.5" PointY="60.375" />
+        <EntityTypeShape EntityType="Model.U_PARTS" Width="2.25" PointX="1.5" PointY="86.75" />
+        <EntityTypeShape EntityType="Model.U_PARTS_USER" Width="1.5" PointX="5.25" PointY="77.375" />
+        <EntityTypeShape EntityType="Model.U_PRICE_LIST" Width="1.5" PointX="3" PointY="91.125" />
+        <EntityTypeShape EntityType="Model.U_PRICE_LIST_USER" Width="1.5" PointX="5.25" PointY="64" />
+        <EntityTypeShape EntityType="Model.U_REPORT_PARAMS" Width="1.5" PointX="3.75" PointY="38.625" />
+        <EntityTypeShape EntityType="Model.U_REPORT_PARAMS_USER" Width="1.5" PointX="9" PointY="21.5" />
+        <EntityTypeShape EntityType="Model.U_SPECIAL_INSPECTION" Width="1.5" PointX="3" PointY="45.125" />
+        <EntityTypeShape EntityType="Model.U_SPECIAL_INSPECTION_USER" Width="1.5" PointX="5.25" PointY="54.5" />
+        <EntityTypeShape EntityType="Model.U_START_SCREEN" Width="1.5" PointX="3.75" PointY="30.75" />
+        <EntityTypeShape EntityType="Model.U_START_SCREEN_USER" Width="1.5" PointX="17" PointY="36.5" />
+        <EntityTypeShape EntityType="Model.U_WREPORT" Width="1.5" PointX="3.75" PointY="13.875" />
+        <EntityTypeShape EntityType="Model.U_WREPORT_QUERY" Width="1.5" PointX="3.75" PointY="18.25" />
+        <EntityTypeShape EntityType="Model.U_WREPORT_QUERY_USER" Width="1.5" PointX="6" PointY="18.5" />
+        <EntityTypeShape EntityType="Model.U_WREPORT_USER" Width="1.5" PointX="6" PointY="14.5" />
+        <EntityTypeShape EntityType="Model.WORKFLOW" Width="1.5" PointX="1.875" PointY="69.5" />
+        <EntityTypeShape EntityType="Model.WORKFLOW_NODE" Width="3.375" PointX="4.125" PointY="68.25" />
+        <EntityTypeShape EntityType="Model.WORKFLOW_USER" Width="3.875" PointX="4.125" PointY="42.75" />
+        <AssociationConnector Association="Model.ALIQUOT_AUTHORISED_BY" />
+        <AssociationConnector Association="Model.ALIQUOT_COMPLETED_BY" />
+        <AssociationConnector Association="Model.ALIQUOT_CREATED_BY" />
+        <AssociationConnector Association="Model.ALIQUOT_GROUP" />
+        <AssociationConnector Association="Model.ALIQUOT_INSPECTION_PLAN" />
+        <AssociationConnector Association="Model.ALIQUOT_LOCATION" />
+        <AssociationConnector Association="Model.ALIQUOT_OPERATOR" />
+        <AssociationConnector Association="Model.ALIQUOT_RECEIVED_BY" />
+        <AssociationConnector Association="Model.ALIQUOT_SAMPLE" />
+        <AssociationConnector Association="Model.ALIQUOT_SUPPLIER" />
+        <AssociationConnector Association="Model.ALIQUOT_USER_ALIQUOT" />
+        <AssociationConnector Association="Model.ALIQUOT_WORKFLOW_NODE" />
+        <AssociationConnector Association="Model.TEST_ALIQUOT" />
+        <AssociationConnector Association="Model.FK_ALIQUOT_USER_U_LAST_LABORAN" />
+        <AssociationConnector Association="Model.CLIENT_GROUP" />
+        <AssociationConnector Association="Model.CLIENT_PARENT_VERSION" />
+        <AssociationConnector Association="Model.CLIENT_USER_CLIENT" />
+        <AssociationConnector Association="Model.FK_SDG_USER_U_PATIENT" />
+        <AssociationConnector Association="Model.SAMPLE_CLIENT" />
+        <AssociationConnector Association="Model.INSPECTION_ENTRY_LIMS_ROLE" />
+        <AssociationConnector Association="Model.INSPECTION_ENTRY_PLAN" />
+        <AssociationConnector Association="Model.INSPECTION_LOG_OPERATOR" />
+        <AssociationConnector Association="Model.INSPECTION_LOG_ROLE" />
+        <AssociationConnector Association="Model.INSPECTION_PLAN_GROUP" />
+        <AssociationConnector Association="Model.INSPECTION_PLAN_PARENT_VER" />
+        <AssociationConnector Association="Model.RESULT_INSPECTION_PLAN" />
+        <AssociationConnector Association="Model.SAMPLE_INSPECTION_PLAN" />
+        <AssociationConnector Association="Model.SDG_INSPECTION_PLAN" />
+        <AssociationConnector Association="Model.TEST_INSPECTION_PLAN" />
+        <AssociationConnector Association="Model.FK_CLINIC_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_CONTAINER_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_CRYSTAL_REPORT_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_CUSTOMER_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_DEBIT_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_ORDER_GROUP_ID" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="Model.FK_PARTS_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_PRICE_LIST_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_REPORT_PARAMS_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_SPECIAL_INSPECTION_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_START_SCREEN_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_WREPORT_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_WREPORT_QUERY_GROUP_ID" />
+        <AssociationConnector Association="Model.LOCATION_GROUP" />
+        <AssociationConnector Association="Model.OPERATOR_GROUP_LIMS_GROUP" />
+        <AssociationConnector Association="Model.PHRASE_HEADER_GROUP" />
+        <AssociationConnector Association="Model.SAMPLE_GROUP" />
+        <AssociationConnector Association="Model.SDG_GROUP" />
+        <AssociationConnector Association="Model.SUPPLIER_GROUP" />
+        <AssociationConnector Association="Model.TEST_GROUP" />
+        <AssociationConnector Association="Model.WORKFLOW_GROUP" />
+        <AssociationConnector Association="Model.FK_SPECIAL_INSPECTION_U_U_ROLE" />
+        <AssociationConnector Association="Model.OPERATOR_LIMS_ROLE" />
+        <AssociationConnector Association="Model.LOCATION_PARENT" />
+        <AssociationConnector Association="Model.LOCATION_PARENT_VERSION" />
+        <AssociationConnector Association="Model.LOCATION_USER_LOCATION" />
+        <AssociationConnector Association="Model.SAMPLE_LOCATION" />
+        <AssociationConnector Association="Model.TEST_LOCATION" />
+        <AssociationConnector Association="Model.FK_CONTAINER_USER_U_CREATE_BY" />
+        <AssociationConnector Association="Model.FK_PRICE_LIST_USER_U_UPDATE_BY" />
+        <AssociationConnector Association="Model.FK_SDG_SDG_RECEI_OPERATOR" />
+        <AssociationConnector Association="Model.FK_SDG_USER_U_PATHOLOG" />
+        <AssociationConnector Association="Model.FK_SPECIAL_INSPECTION_U_U_OPER" />
+        <AssociationConnector Association="Model.FK_SPECIAL_INSPECTION_U_U_SEND" />
+        <AssociationConnector Association="Model.OPERATOR_GROUP_OPERATOR" />
+        <AssociationConnector Association="Model.RESULT_AUTHORISED_BY" />
+        <AssociationConnector Association="Model.RESULT_COMPLETED_BY" />
+        <AssociationConnector Association="Model.RESULT_CREATED_BY" />
+        <AssociationConnector Association="Model.RESULT_OPERATOR" />
+        <AssociationConnector Association="Model.SAMPLE_AUTHORISED_BY" />
+        <AssociationConnector Association="Model.SAMPLE_COMPLETED_BY" />
+        <AssociationConnector Association="Model.SAMPLE_CREATED_BY" />
+        <AssociationConnector Association="Model.SAMPLE_OPERATOR" />
+        <AssociationConnector Association="Model.SAMPLE_RECEIVED_BY" />
+        <AssociationConnector Association="Model.SAMPLE_SAMPLED_BY" />
+        <AssociationConnector Association="Model.SDG_AUTHORISED_BY" />
+        <AssociationConnector Association="Model.SDG_COMPLETED_BY" />
+        <AssociationConnector Association="Model.SDG_CREATED_BY" />
+        <AssociationConnector Association="Model.TEST_AUTHORISED_BY" />
+        <AssociationConnector Association="Model.TEST_COMPLETED_BY" />
+        <AssociationConnector Association="Model.TEST_CREATED_BY" />
+        <AssociationConnector Association="Model.TEST_OPERATOR" />
+        <AssociationConnector Association="Model.PHRASE_ENTRY_PHRASE_HEADER" />
+        <AssociationConnector Association="Model.PHRASE_HEADER_PARENT_VER" />
+        <AssociationConnector Association="Model.RESULT_TEST" />
+        <AssociationConnector Association="Model.RESULT_WORKFLOW_NODE" />
+        <AssociationConnector Association="Model.SAMPLE_PARENT" />
+        <AssociationConnector Association="Model.SAMPLE_SDG" />
+        <AssociationConnector Association="Model.SAMPLE_USER_SAMPLE" />
+        <AssociationConnector Association="Model.SAMPLE_WORKFLOW_NODE" />
+        <AssociationConnector Association="Model.FK_SPECIAL_INSPECTION_U_U_SDG_" />
+        <AssociationConnector Association="Model.SDG_USER_SDG" />
+        <AssociationConnector Association="Model.SDG_WORKFLOW_NODE" />
+        <AssociationConnector Association="Model.FK_SDG_USER_U_COLLECTION_STATI" />
+        <AssociationConnector Association="Model.FK_SDG_USER_U_CONTAINER_ID" />
+        <AssociationConnector Association="Model.FK_SDG_USER_U_IMPLEMENTING_CLI" />
+        <AssociationConnector Association="Model.FK_SDG_USER_U_IMPLEMENTING_PHY" />
+        <AssociationConnector Association="Model.FK_SDG_USER_U_ORDER_ID" />
+        <AssociationConnector Association="Model.FK_SDG_USER_U_REFERRAL_PHYSICI" />
+        <AssociationConnector Association="Model.FK_SDG_USER_U_REFERRING_PHYSIC" />
+        <AssociationConnector Association="Model.SUPPLIER_PARENT_VERSION" />
+        <AssociationConnector Association="Model.SUPPLIER_USER_SUPPLIER" />
+        <AssociationConnector Association="Model.TEST_USER_TEST" />
+        <AssociationConnector Association="Model.TEST_WORKFLOW_NODE" />
+        <AssociationConnector Association="Model.FK_CLINIC_PARENT_VERSION_ID" />
+        <AssociationConnector Association="Model.FK_CONTAINER_USER_U_CLINIC" />
+        <AssociationConnector Association="Model.FK_START_SCREEN_USER_U_CLINIC_" />
+        <AssociationConnector Association="Model.FK_U_CLINIC_USER" />
+        <AssociationConnector Association="Model.FK_CLINIC_USER_U_CUSTOMER_ID" />
+        <AssociationConnector Association="Model.FK_CONTAINER_PARENT_VERSION_ID" />
+        <AssociationConnector Association="Model.FK_CONTAINER_WORKFLOW_NODE_ID" />
+        <AssociationConnector Association="Model.FK_U_CONTAINER_USER" />
+        <AssociationConnector Association="Model.FK_CRYSTAL_REPORT_PARENT_VERSI" />
+        <AssociationConnector Association="Model.FK_REPORT_PARAMS_USER_U_REPORT" />
+        <AssociationConnector Association="Model.FK_U_CRYSTAL_REPORT_USER" />
+        <AssociationConnector Association="Model.FK_CUSTOMER_PARENT_VERSION_ID" />
+        <AssociationConnector Association="Model.FK_ORDER_USER_U_CUSTOMER" />
+        <AssociationConnector Association="Model.FK_ORDER_USER_U_SECOND_CUSTOME" />
+        <AssociationConnector Association="Model.FK_START_SCREEN_USER_U_CUSTOME" />
+        <AssociationConnector Association="Model.FK_U_CUSTOMER_USER" />
+        <AssociationConnector Association="Model.FK_CUSTOMER_USER_U_PRICE_LIST_" />
+        <AssociationConnector Association="Model.FK_DEBIT_PARENT_VERSION_ID" />
+        <AssociationConnector Association="Model.FK_U_DEBIT_USER" />
+        <AssociationConnector Association="Model.FK_DEBIT_USER_U_ORDER_ID" />
+        <AssociationConnector Association="Model.FK_DEBIT_USER_U_PARTS_ID" />
+        <AssociationConnector Association="Model.FK_ORDER_PARENT_VERSION_ID" />
+        <AssociationConnector Association="Model.FK_ORDER_WORKFLOW_NODE_ID" />
+        <AssociationConnector Association="Model.FK_U_ORDER_USER" />
+        <AssociationConnector Association="Model.FK_ORDER_USER_U_PARTS_ID" />
+        <AssociationConnector Association="Model.FK_PARTS_PARENT_VERSION_ID" />
+        <AssociationConnector Association="Model.FK_PRICE_LIST_USER_U_PART_ID" />
+        <AssociationConnector Association="Model.FK_U_PARTS_USER" />
+        <AssociationConnector Association="Model.FK_PARTS_USER_U_EXTRA_SAMPLE_W" />
+        <AssociationConnector Association="Model.FK_PARTS_USER_U_SDG_WORKFLOW" />
+        <AssociationConnector Association="Model.FK_PRICE_LIST_PARENT_VERSION_I" />
+        <AssociationConnector Association="Model.FK_U_PRICE_LIST_USER" />
+        <AssociationConnector Association="Model.FK_REPORT_PARAMS_PARENT_VERSIO" />
+        <AssociationConnector Association="Model.FK_U_REPORT_PARAMS_USER" />
+        <AssociationConnector Association="Model.FK_SPECIAL_INSPECTION_PARENT_V" />
+        <AssociationConnector Association="Model.FK_U_SPECIAL_INSPECTION_USER" />
+        <AssociationConnector Association="Model.FK_START_SCREEN_PARENT_VERSION" />
+        <AssociationConnector Association="Model.FK_U_START_SCREEN_USER" />
+        <AssociationConnector Association="Model.FK_U_WREPORT_USER" />
+        <AssociationConnector Association="Model.FK_WREPORT_PARENT_VERSION_ID" />
+        <AssociationConnector Association="Model.FK_U_WREPORT_QUERY_USER" />
+        <AssociationConnector Association="Model.FK_WREPORT_QUERY_PARENT_VERSIO" />
+        <AssociationConnector Association="Model.WORKFLOW_NODE_WORKFLOW" />
+        <AssociationConnector Association="Model.WORKFLOW_PARENT_VERSION" />
+        <AssociationConnector Association="Model.WORKFLOW_WORKFLOW_USER" />
+        <AssociationConnector Association="Model.WORKFLOW_NODE_PARENT" />
+        <AssociationConnector Association="Model.OPERATOR_ROLE" />
+        <EntityTypeShape EntityType="Model.ALIQUOT_FORMULATION" Width="1.5" PointX="13.5" PointY="70.875" />
+        <AssociationConnector Association="Model.ALIQUOT_FORMULATION_CHILD" />
+        <AssociationConnector Association="Model.ALIQUOT_FORMULATION_PARENT" />
+        <EntityTypeShape EntityType="Model.WORKSTATION" Width="1.5" PointX="14.25" PointY="54.875" />
+        <AssociationConnector Association="Model.FK_ALIQUOT_USER_U_LAST_MICRO2" />
+        <AssociationConnector Association="Model.FK_ALIQUOT_USER_U_LAST_MICROTO" />
+        <AssociationConnector Association="Model.WORKSTATION_GROUP" />
+        <AssociationConnector Association="Model.WORKSTATION_LOCATION" />
+        <AssociationConnector Association="Model.WORKSTATION_DEFAULT_OPERATOR" />
+        <AssociationConnector Association="Model.WORKSTATION_PARENT_VERSION" />
+        <EntityTypeShape EntityType="Model.U_NORGAN" Width="1.5" PointX="3.25" PointY="1.5" />
+        <AssociationConnector Association="Model.FK_NORGAN_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_NORGAN_PARENT_VERSION_ID" />
+        <AssociationConnector Association="Model.FK_WREPORT_QUERY_USER_U_WREPOR" />
+        <EntityTypeShape EntityType="Model.U_WRDESTINATION" Width="1.5" PointX="3.75" PointY="10" />
+        <EntityTypeShape EntityType="Model.U_WRDESTINATION_USER" Width="1.5" PointX="6" PointY="10.5" />
+        <AssociationConnector Association="Model.FK_WRDESTINATION_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_U_WRDESTINATION_USER" />
+        <AssociationConnector Association="Model.FK_WRDESTINATION_PARENT_VERSIO" />
+        <AssociationConnector Association="Model.FK_WRDESTINATION_USER_U_WREPOR" />
+        <EntityTypeShape EntityType="Model.U_NORGAN_USER" Width="1.5" PointX="6" PointY="1.875" />
+        <AssociationConnector Association="Model.FK_U_NORGAN_USER" />
+        <AssociationConnector Association="Model.FK_PARTS_USER_U_PART_DEFAULT_S" />
+        <EntityTypeShape EntityType="Model.SCHEMA_TABLE" Width="1.5" PointX="6.75" PointY="26.5" />
+        <AssociationConnector Association="Model.FK_REPORT_PARAMS_USER_U_PHRASE" />
+        <AssociationConnector Association="Model.FK_REPORT_PARAMS_USER_U_TABLE" />
+        <AssociationConnector Association="Model.SCHEMA_TABLE_ACTIVE_TABLE" />
+        <AssociationConnector Association="Model.SCHEMA_TABLE_EXTRA_TABLE" />
+        <EntityTypeShape EntityType="Model.U_LABORANT_WORK" Width="1.5" PointX="6" PointY="46.875" />
+        <EntityTypeShape EntityType="Model.U_LABORANT_WORK_USER" Width="1.5" PointX="8.25" PointY="50" />
+        <AssociationConnector Association="Model.FK_LABORANT_WORK_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_LABORANT_WORK_USER_U_LABORA" />
+        <AssociationConnector Association="Model.FK_LABORANT_WORK_PARENT_VERSIO" />
+        <AssociationConnector Association="Model.FK_U_LABORANT_WORK_USER" />
+        <EntityTypeShape EntityType="Model.U_ALL_BARCODE_SCAN" Width="1.5" PointX="14.25" PointY="50.875" />
+        <EntityTypeShape EntityType="Model.U_ALL_BARCODE_SCAN_USER" Width="1.5" PointX="18.5" PointY="58.25" />
+        <AssociationConnector Association="Model.FK_ALL_BARCODE_SCAN_USE_U_ALIQ" />
+        <AssociationConnector Association="Model.FK_ALL_BARCODE_SCAN_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_ALL_BARCODE_SCAN_USE_U_LABO" />
+        <AssociationConnector Association="Model.FK_ALL_BARCODE_SCAN_PARENT_VER" />
+        <AssociationConnector Association="Model.FK_U_ALL_BARCODE_SCAN_USER" />
+        <EntityTypeShape EntityType="Model.OPERATOR_USER" Width="1.5" PointX="13.375" PointY="23.75" />
+        <AssociationConnector Association="Model.OPERATOR_OPERATOR_USER" />
+        <EntityTypeShape EntityType="Model.WORKSTATION_USER" Width="1.5" PointX="5.25" PointY="29.125" />
+        <AssociationConnector Association="Model.WORKSTATION_WORKSTATION_USER" />
+        <EntityTypeShape EntityType="Model.RTF_RESULT" Width="1.5" PointX="4.2613003143394836" PointY="16.286804430320302" />
+        <EntityTypeShape EntityType="Model.U_SDG_ATTACHMENT" Width="1.5" PointX="10.547561516308953" PointY="14.31352383564856" />
+        <EntityTypeShape EntityType="Model.U_SDG_ATTACHMENT_USER" Width="1.5" PointX="5.7715887491458977" PointY="10.648744155954915" />
+        <AssociationConnector Association="Model.FK_SDG_ATTACHMENT_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_SDG_ATTACHMENT_USER_U_SDG_I" />
+        <AssociationConnector Association="Model.FK_SDG_ATTACHMENT_PARENT_VERSI" />
+        <AssociationConnector Association="Model.FK_U_SDG_ATTACHMENT_USER" />
+        <EntityTypeShape EntityType="Model.U_ROTHER" Width="1.5" PointX="15.25" PointY="22.25" />
+        <AssociationConnector Association="Model.FK_ROTHER_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_ROTHER_PARENT_VERSION_ID" />
+        <AssociationConnector Association="Model.FK_ALIQUOT_USER_U_DEBIT_ID" />
+        <EntityTypeShape EntityType="Model.U_NLIST_USER" Width="1.5" PointX="14.5" PointY="14" />
+        <EntityTypeShape EntityType="Model.U_EXTRA_REQUEST" Width="3.375" PointX="19" PointY="4.375" />
+        <EntityTypeShape EntityType="Model.U_EXTRA_REQUEST_DATA" Width="3.625" PointX="18.375" PointY="16.25" />
+        <EntityTypeShape EntityType="Model.U_EXTRA_REQUEST_DATA_USER" Width="3.625" PointX="24.25" PointY="7" />
+        <EntityTypeShape EntityType="Model.U_EXTRA_REQUEST_USER" Width="3.875" PointX="17.75" PointY="30.875" />
+        <AssociationConnector Association="Model.FK_EXTRA_REQUEST_DATA_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_EXTRA_REQUEST_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_EXTRA_REQUEST_USER_U_CREATE" />
+        <AssociationConnector Association="Model.FK_EXTRA_REQUEST_USER_U_SDG_ID" />
+        <AssociationConnector Association="Model.FK_EXTRA_REQUEST_DATA_U_U_EXTR" />
+        <AssociationConnector Association="Model.FK_EXTRA_REQUEST_PARENT_VERSIO" />
+        <AssociationConnector Association="Model.FK_U_EXTRA_REQUEST_USER" />
+        <AssociationConnector Association="Model.FK_EXTRA_REQUEST_DATA_PARENT_V" />
+        <AssociationConnector Association="Model.FK_U_EXTRA_REQUEST_DATA_USER" />
+        <EntityTypeShape EntityType="Model.U_ROTHER_USER" Width="1.5" PointX="8.25" PointY="15.375" />
+        <AssociationConnector Association="Model.FK_ROTHER_USER_U_SDG_ID" />
+        <AssociationConnector Association="Model.FK_U_ROTHER_USER" />
+        
+        <EntityTypeShape EntityType="Model.U_MORE_ACTION_USER" Width="1.5" PointX="5.6050152879231678" PointY="9.2310811622213027" />
+        <EntityTypeShape EntityType="Model.U_MORE_ACTION" Width="1.5" PointX="1.7430881847362445" PointY="9.4268643601922619" />
+        <AssociationConnector Association="Model.FK_MORE_ACTION_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_MORE_ACTION_USER_U_SDG_ID" />
+        <AssociationConnector Association="Model.FK_MORE_ACTION_PARENT_VERSION_" />
+        <AssociationConnector Association="Model.FK_U_MORE_ACTION_USER" />
+        <EntityTypeShape EntityType="Model.PAYMENT" Width="1.5" PointX="13" PointY="27.75" />
+        <AssociationConnector Association="Model.FK_SDG_USER_U_CANCELD_BY" />
+        <EntityTypeShape EntityType="Model.U_CONTAINER_MSG" Width="1.5" PointX="3.5235952974872644" PointY="24.102080117958636" />
+        <EntityTypeShape EntityType="Model.U_CONTAINER_MSG_ROW" Width="1.5" PointX="3.0579951997185106" PointY="19.284690433780053" />
+        <EntityTypeShape EntityType="Model.U_CONTAINER_MSG_ROW_USER" Width="1.5" PointX="13.5" PointY="7.375" />
+        <AssociationConnector Association="Model.FK_CONTAINER_MSG_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_CONTAINER_MSG_ROW_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_CONTAINER_MSG_PARENT_VERSIO" />
+        <AssociationConnector Association="Model.FK_CONTAINER_MSG_ROW_US_U_MSG_" />
+        <AssociationConnector Association="Model.FK_CONTAINER_MSG_ROW_PARENT_VE" />
+        <AssociationConnector Association="Model.FK_U_CONTAINER_MSG_ROW_USER" />
+        <EntityTypeShape EntityType="Model.U_SAMPLE_MSG" Width="1.5" PointX="10.828169987922614" PointY="9.3265917642631528" />
+        <EntityTypeShape EntityType="Model.U_SAMPLE_MSG_USER" Width="3" PointX="18.125" PointY="133.875" />
+        <AssociationConnector Association="Model.FK_SAMPLE_MSG_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_SAMPLE_MSG_PARENT_VERSION_I" />
+        <AssociationConnector Association="Model.FK_U_SAMPLE_MSG_USER" />
+        <AssociationConnector Association="Model.FK_SAMPLE_MSG_USER_U_CLIENT_ID" />
+        <AssociationConnector Association="Model.FK_SAMPLE_MSG_USER_U_CLINIC_ID" />
+        <AssociationConnector Association="Model.FK_SAMPLE_MSG_USER_U_IMPLEMENT" />
+        <AssociationConnector Association="Model.FK_SAMPLE_MSG_USER_U_REFERRING" />
+        <EntityTypeShape EntityType="Model.U_SAMPLE_MSG_ROW_USER" Width="1.5" PointX="1.4277528009506653" PointY="20.03392913380355" />
+        <AssociationConnector Association="Model.FK_SAMPLE_MSG_ROW_USER_U_SAMPL" />
+        <EntityTypeShape EntityType="Model.U_SAMPLE_MSG_ROW" Width="1.5" PointX="6.9178913118866694" PointY="7.4076109712047558" />
+        <AssociationConnector Association="Model.FK_SAMPLE_MSG_ROW_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_SAMPLE_MSG_ROW_PARENT_VERSI" />
+        <AssociationConnector Association="Model.FK_U_SAMPLE_MSG_ROW_USER" />
+        <AssociationConnector Association="Model.FK_SAMPLE_MSG_USER_U_ORDER_ID" />
+        <EntityTypeShape EntityType="Model.U_CONTAINER_MSG_USER" Width="2.375" PointX="15" PointY="133.5" />
+        <AssociationConnector Association="Model.FK_CONTAINER_MSG_USER_U_CLINIC" />
+        <AssociationConnector Association="Model.FK_U_CONTAINER_MSG_USER" />
+        <EntityTypeShape EntityType="Model.U_ASSUTA_CUSTOMER" Width="1.5" PointX="7" PointY="34.625" />
+        <EntityTypeShape EntityType="Model.U_ASSUTA_CUSTOMER_USER" Width="1.5" PointX="8.9435694724989911" PointY="30.6404283189403" />
+        <AssociationConnector Association="Model.FK_ASSUTA_CUSTOMER_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_ASSUTA_CUSTOMER_PARENT_VERS" />
+        <AssociationConnector Association="Model.FK_U_ASSUTA_CUSTOMER_USER" />
+        <AssociationConnector Association="Model.FK_ASSUTA_CUSTOMER_USER_U_ASSU" />
+        <AssociationConnector Association="Model.FK_ASSUTA_CUSTOMER_USER_U_PA2" />
+        <AssociationConnector Association="Model.FK_ASSUTA_CUSTOMER_USER_U_PATH" />
+        <EntityTypeShape EntityType="Model.U_REQUEST_REMARK" Width="1.5" PointX="5.762078345642462" PointY="13.738121113617961" />
+        <AssociationConnector Association="Model.FK_REQUEST_REMARK_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_REQUEST_REMARK_PARENT_VERSI" />
+        <AssociationConnector Association="Model.FK_PARTS_USER_U_FIRST_SAMPLE_W" />
+        <EntityTypeShape EntityType="Model.U_NEW_RE_DESC" Width="1.5" PointX="7.75" PointY="1.375" />
+        <EntityTypeShape EntityType="Model.U_NEW_RE_DESC_USER" Width="1.5" PointX="11.875" PointY="2.125" />
+        <AssociationConnector Association="Model.FK_NEW_RE_DESC_GROUP_ID" />
+        <AssociationConnector Association="Model.FK_NEW_RE_DESC_PARENT_VERSION_" />
+        <AssociationConnector Association="Model.FK_U_NEW_RE_DESC_USER" />
+        <EntityTypeShape EntityType="Model.RESULT_TEMPLATE" Width="1.5" PointX="2.1136777392186588" PointY="23.751389246318205" />
+        <AssociationConnector Association="Model.RESULT_TEMPLATE_INSPECTION_PLA" />
+        <AssociationConnector Association="Model.RESULT_TEMPLATE_GROUP" />
+        <AssociationConnector Association="Model.RESULT_TEMPLATE_PHRASE" />
+        <AssociationConnector Association="Model.RESULT_RESULT_TEMPLATE" />
+        <AssociationConnector Association="Model.FK_NEW_RE_DESC_USER_U_RESULT_T" />
+        <AssociationConnector Association="Model.RESULT_TEMPLATE_PARENT_VERSION" />
+        <EntityTypeShape EntityType="Model.PATHOLOG_WORKLIST" PointX="14.875" PointY="2.25" Width="3.875" />
+        <EntityTypeShape EntityType="Model.SDG_DETAILS" Width="1.5" PointX="7" PointY="23.875" />
+        <EntityTypeShape EntityType="Model.EXTRA_MATERIAL" Width="3.125" PointX="8.5" PointY="24.875" />
+        <EntityTypeShape EntityType="Model.EXTRA_SLIDES" Width="1.5" PointX="5.5" PointY="21.625" />
+        <EntityTypeShape EntityType="Model.SDG_RESULTS" Width="1.5" PointX="10.376566891733821" PointY="25.34127005624644" />
+        <EntityTypeShape EntityType="Model.EXTRA_CELL_BLOCK" Width="1.5" PointX="7.1885142043179435" PointY="19.021873125350975" />
+        <EntityTypeShape EntityType="Model.EXTRA_PAP_DILUTION" Width="3.125" PointX="8.25" PointY="11.625" />
+        <EntityTypeShape EntityType="Model.HISTOLOGY_BLOCK_LIST" Width="1.5" PointX="9.6460969493007731" PointY="18.46506797637095" />
+        <EntityTypeShape EntityType="Model.SDG_LOG_CYTOLOGY" Width="1.5" PointX="1.6793237392228675" PointY="9.3958073600175833" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
