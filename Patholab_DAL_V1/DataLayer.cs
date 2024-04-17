@@ -79,120 +79,69 @@ namespace Patholab_DAL_V1
         }
         public OracleConnection GetOracleConnection(INautilusDBConnection ntlsCon)
         {
-
             OracleConnection connection = null;
 
             if (ntlsCon != null)
             {
-
-
-                // Initialize variables
-                String roleCommand;
-                // Try/Catch block
                 try
                 {
-
-
-                    var C = ntlsCon.GetServerIsProxy();
-                    var C2 = ntlsCon.GetServerName();
-                    var C4 = ntlsCon.GetServerType();
-
-                    var C6 = ntlsCon.GetServerExtra();
-
-                    var C8 = ntlsCon.GetPassword();
-                    var C9 = ntlsCon.GetLimsUserPwd();
-                    var C10 = ntlsCon.GetServerIsProxy();
-                    //var DD = _ntlsSite;
-
-
-
-
-                    //var u = _ntlsUser.GetOperatorName();
-                    //var u1 = _ntlsUser.GetWorkstationName();
-
-
-
+                    // Get the ADO.NET connection string from the provided interface
                     string _connectionString = ntlsCon.GetADOConnectionString();
 
-                    var splited = _connectionString.Split(';');
+                    // Split the connection string by ';' to extract relevant information
+                    var splitted = _connectionString.Split(';');
 
+                    // Initialize a new connection string
                     var cs = "";
 
-                    for (int i = 1; i < splited.Count(); i++)
+                    // Build the connection string excluding the first element (assumed to be the provider)
+                    for (int i = 1; i < splitted.Length; i++)
                     {
-                        cs += splited[i] + ';';
+                        cs += splitted[i] + ';';
                     }
-                    //<<<<<<< .mine
+
+                    // Get the username from the provided interface
                     var username = ntlsCon.GetUsername();
+
+                    // If username is empty, construct a new connection string with default user
                     if (string.IsNullOrEmpty(username))
                     {
                         var serverDetails = ntlsCon.GetServerDetails();
                         cs = "User Id=/;Data Source=" + serverDetails + ";";
                     }
 
-
-                    //Create the connection
+                    // Create a new Oracle connection using the prepared connection string
                     connection = new OracleConnection(cs);
 
-
-
-                    // Open the connection
+                    // Open the connection to the Oracle database
                     connection.Open();
 
-                    // Get lims user password
+                    // Get the LIMS user password from the provided interface
                     string limsUserPassword = ntlsCon.GetLimsUserPwd();
 
-                    // Set role lims user
-                    if (limsUserPassword == "")
-                    {
-                        // LIMS_USER is not password protected
-                        roleCommand = "set role lims_user";
-                    }
-                    else
-                    {
-                        // LIMS_USER is password protected.
-                        roleCommand = "set role lims_user identified by " + limsUserPassword;
-                    }
+                    // Determine the SQL command to set the role based on the presence of LIMS user password
+                    string roleCommand = string.IsNullOrEmpty(limsUserPassword) ? "set role lims_user" : "set role lims_user identified by " + limsUserPassword;
 
-                    // set the Oracle user for this connecition
+                    // Execute the role-setting command on the Oracle connection
                     OracleCommand command = new OracleCommand(roleCommand, connection);
-
-                    // Try/Catch block
-                    try
-                    {
-                        // Execute the command
-                        command.ExecuteNonQuery();
-                    }
-                    catch (Exception f)
-                    {
-                        // Throw the exception
-                        throw new Exception("Inconsistent role Security : " + f.Message);
-                    }
-
-                    // Get the session id
-                    _session_id = ntlsCon.GetSessionId();
-
-                    // Connect to the same session
-                    string sSql = string.Format("call lims.lims_env.connect_same_session({0})", _session_id);
-
-                    // Build the command
-                    command = new OracleCommand(sSql, connection);
-
-                    // Execute the command
                     command.ExecuteNonQuery();
 
+                    // Get the session ID from the provided interface
+                    double _session_id = ntlsCon.GetSessionId();
+                    // Prepare and execute the SQL command to connect to the specified session
+                    string sSql = string.Format("call lims.lims_env.connect_same_session({0})", _session_id);
+                    command = new OracleCommand(sSql, connection);
+                    command.ExecuteNonQuery();
                 }
                 catch (Exception e)
                 {
-                    // Throw the exception
-                    throw e;
+                    // Catch and rethrow any exceptions that occur during the Oracle connection establishment
+                    throw new Exception("An error occurred while establishing Oracle connection: " + e.Message);
                 }
 
-                // Return the connection
             }
 
             return connection;
-
         }
 
         public OracleConnection GetOracleConnection()
