@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dfb89f393e7742eda0bbea7a9fd6febf" Name="Diagram1" ZoomLevel="73">
+      <Diagram DiagramId="dfb89f393e7742eda0bbea7a9fd6febf" Name="Diagram1" ZoomLevel="109">
         <EntityTypeShape EntityType="Model.ADDRESS" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.ALIQUOT" Width="1.5" PointX="11.25" PointY="51.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.ALIQUOT_USER" Width="1.5" PointX="16.5" PointY="49.125" />
@@ -352,8 +352,8 @@
         <EntityTypeShape EntityType="Model.SDG_RESULTS" Width="1.5" PointX="10.376566891733821" PointY="25.34127005624644" />
         <EntityTypeShape EntityType="Model.EXTRA_CELL_BLOCK" Width="1.5" PointX="7.1885142043179435" PointY="19.021873125350975" />
         <EntityTypeShape EntityType="Model.EXTRA_PAP_DILUTION" Width="3.125" PointX="8.25" PointY="11.625" />
-        <EntityTypeShape EntityType="Model.HISTOLOGY_BLOCK_LIST" Width="1.5" PointX="9.6460969493007731" PointY="18.46506797637095" />
         <EntityTypeShape EntityType="Model.SDG_LOG_CYTOLOGY" Width="1.5" PointX="1.6793237392228675" PointY="9.3958073600175833" />
+        <EntityTypeShape EntityType="Model.HISTOLOGY_BLOCK_LIST" Width="4.5" PointX="9" PointY="153" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -54,6 +54,29 @@ namespace Patholab_DAL_V1
 
             }
         }
+
+        public List<T> FetchDataFromDB<T>( string query, Func<OracleDataReader, T> mapFunc)
+        {
+            List<T> result = new List<T>();
+
+            var connection = GetOracleConnection(_ntlsCon);
+
+            using (OracleCommand command = connection.CreateCommand())
+            {
+                command.CommandText = query;
+
+                using (OracleDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        T item = mapFunc(reader);
+                        result.Add(item);
+                    }
+                }
+            }
+
+            return result;
+        }
         public OracleConnection GetOracleConnection(INautilusDBConnection ntlsCon)
         {
 

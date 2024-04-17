@@ -15,16 +15,13 @@ namespace Patholab_DAL_V1
     public partial class HISTOLOGY_BLOCK_LIST
     {
         public long SDG_ID { get; set; }
-        public string U_BASKET { get; set; }
-        public string ALIQ_NAME { get; set; }
-        public string STATUS { get; set; }
-        public string U_ALIQUOT_STATION { get; set; }
-        public Nullable<System.DateTime> MACRO_DATE { get; set; }
-        public Nullable<long> U_LAST_LABORANT { get; set; }
-        public string ALIQ_STATUS { get; set; }
         public long ALIQUOT_ID { get; set; }
+        public string ALIQ_NAME { get; set; }
+        public string U_BASKET { get; set; }
+        public string PRIORITY { get; set; }
+        public string ALIQUOT_STATION { get; set; }
+        public Nullable<System.DateTime> MACRO_DATE { get; set; }
+        public string LABWORKERHEBREW_NAME { get; set; }
         public Nullable<System.DateTime> RECEIVED_ON { get; set; }
-        public string LABORANT_NAME { get; set; }
-        public string BASKET_DESC { get; set; }
     }
 }

@@ -185,17 +185,14 @@
           <EntitySet Name="HISTOLOGY_BLOCK_LIST" EntityType="Model.Store.HISTOLOGY_BLOCK_LIST" store:Type="Views" store:Schema="LIMS" store:Name="HISTOLOGY_BLOCK_LIST">
             <DefiningQuery>SELECT 
       "HISTOLOGY_BLOCK_LIST"."SDG_ID" AS "SDG_ID", 
-      "HISTOLOGY_BLOCK_LIST"."U_BASKET" AS "U_BASKET", 
-      "HISTOLOGY_BLOCK_LIST"."ALIQ_NAME" AS "ALIQ_NAME", 
-      "HISTOLOGY_BLOCK_LIST"."STATUS" AS "STATUS", 
-      "HISTOLOGY_BLOCK_LIST"."U_ALIQUOT_STATION" AS "U_ALIQUOT_STATION", 
-      "HISTOLOGY_BLOCK_LIST"."MACRO_DATE" AS "MACRO_DATE", 
-      "HISTOLOGY_BLOCK_LIST"."U_LAST_LABORANT" AS "U_LAST_LABORANT", 
       "HISTOLOGY_BLOCK_LIST"."ALIQUOT_ID" AS "ALIQUOT_ID", 
-      "HISTOLOGY_BLOCK_LIST"."LABORANT_NAME" AS "LABORANT_NAME", 
-      "HISTOLOGY_BLOCK_LIST"."RECEIVED_ON" AS "RECEIVED_ON", 
-      "HISTOLOGY_BLOCK_LIST"."ALIQ_STATUS" AS "ALIQ_STATUS", 
-      "HISTOLOGY_BLOCK_LIST"."BASKET_DESC" AS "BASKET_DESC"
+      "HISTOLOGY_BLOCK_LIST"."ALIQ_NAME" AS "ALIQ_NAME", 
+      "HISTOLOGY_BLOCK_LIST"."U_BASKET" AS "U_BASKET", 
+      "HISTOLOGY_BLOCK_LIST"."PRIORITY" AS "PRIORITY", 
+      "HISTOLOGY_BLOCK_LIST"."ALIQUOT_STATION" AS "ALIQUOT_STATION", 
+      "HISTOLOGY_BLOCK_LIST"."MACRO_DATE" AS "MACRO_DATE", 
+      "HISTOLOGY_BLOCK_LIST"."LABWORKERHEBREW_NAME" AS "LABWORKERHEBREW_NAME", 
+      "HISTOLOGY_BLOCK_LIST"."RECEIVED_ON" AS "RECEIVED_ON"
       FROM "LIMS"."HISTOLOGY_BLOCK_LIST" "HISTOLOGY_BLOCK_LIST"</DefiningQuery>
           </EntitySet>
           <EntitySet Name="PATHOLOG_WORKLIST" EntityType="Model.Store.PATHOLOG_WORKLIST" store:Type="Views" store:Schema="LIMS" store:Name="PATHOLOG_WORKLIST">
@@ -3093,17 +3090,14 @@
             <PropertyRef Name="ALIQUOT_ID" />
           </Key>
           <Property Name="SDG_ID" Type="number" Nullable="false" Precision="16" />
-          <Property Name="U_BASKET" Type="varchar2" MaxLength="30" />
-          <Property Name="ALIQ_NAME" Type="varchar2" MaxLength="255" />
-          <Property Name="STATUS" Type="char" MaxLength="1" />
-          <Property Name="U_ALIQUOT_STATION" Type="varchar2" MaxLength="2000" />
-          <Property Name="MACRO_DATE" Type="date" />
-          <Property Name="U_LAST_LABORANT" Type="number" Precision="16" />
           <Property Name="ALIQUOT_ID" Type="number" Nullable="false" Precision="16" />
-          <Property Name="LABORANT_NAME" Type="varchar2" MaxLength="255" />
+          <Property Name="ALIQ_NAME" Type="varchar2" MaxLength="2000" />
+          <Property Name="U_BASKET" Type="varchar2" MaxLength="30" />
+          <Property Name="PRIORITY" Type="varchar2" />
+          <Property Name="ALIQUOT_STATION" Type="varchar2" />
+          <Property Name="MACRO_DATE" Type="date" />
+          <Property Name="LABWORKERHEBREW_NAME" Type="varchar2" MaxLength="2000" />
           <Property Name="RECEIVED_ON" Type="date" />
-          <Property Name="ALIQ_STATUS" Type="char" MaxLength="10" />
-          <Property Name="BASKET_DESC" Type="varchar2" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'LIMS.PATHOLOG_WORKLIST' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -7409,8 +7403,8 @@
           </AssociationSet>
           <EntitySet Name="EXTRA_CELL_BLOCK" EntityType="Model.EXTRA_CELL_BLOCK" />
           <EntitySet Name="EXTRA_PAP_DILUTION" EntityType="Model.EXTRA_PAP_DILUTION" />
-          <EntitySet Name="HISTOLOGY_BLOCK_LIST" EntityType="Model.HISTOLOGY_BLOCK_LIST" />
           <EntitySet Name="SDG_LOG_CYTOLOGY" EntityType="Model.SDG_LOG_CYTOLOGY" />
+          <EntitySet Name="HISTOLOGY_BLOCK_LIST" EntityType="Model.HISTOLOGY_BLOCK_LIST" />
           </EntityContainer>
         <EntityType Name="ADDRESS">
           <Key>
@@ -12761,24 +12755,6 @@
           <Property Type="String" Name="EX_REQ_STATUS" MaxLength="2000" FixedLength="false" Unicode="false" />
           <Property Type="Int64" Name="EX_REQ_DATA_ID" Nullable="false" />
         </EntityType>
-        <EntityType Name="HISTOLOGY_BLOCK_LIST">
-          <Key>
-            <PropertyRef Name="SDG_ID" />
-            <PropertyRef Name="ALIQUOT_ID" />
-          </Key>
-          <Property Type="Int64" Name="SDG_ID" Nullable="false" />
-          <Property Type="String" Name="U_BASKET" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="ALIQ_NAME" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="STATUS" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Type="String" Name="U_ALIQUOT_STATION" MaxLength="2000" FixedLength="false" Unicode="false" />
-          <Property Type="DateTime" Name="MACRO_DATE" Precision="0" />
-          <Property Type="Int64" Name="U_LAST_LABORANT" />
-          <Property Type="String" Name="ALIQ_STATUS" MaxLength="10" FixedLength="true" Unicode="false" />
-          <Property Type="Int64" Name="ALIQUOT_ID" Nullable="false" />
-          <Property Type="DateTime" Name="RECEIVED_ON" Precision="0" />
-          <Property Type="String" Name="LABORANT_NAME" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="BASKET_DESC" MaxLength="4000" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="SDG_LOG_CYTOLOGY">
           <Key>
             <PropertyRef Name="SDG_ID" />
@@ -12793,6 +12769,21 @@
           <Property Type="String" Name="ENTITY" MaxLength="4000" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="PRIORITY" MaxLength="4000" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="PART" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="HISTOLOGY_BLOCK_LIST">
+          <Key>
+            <PropertyRef Name="SDG_ID" />
+            <PropertyRef Name="ALIQUOT_ID" />
+          </Key>
+          <Property Type="Int64" Name="SDG_ID" Nullable="false" />
+          <Property Type="Int64" Name="ALIQUOT_ID" Nullable="false" />
+          <Property Type="String" Name="ALIQ_NAME" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="U_BASKET" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PRIORITY" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ALIQUOT_STATION" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="MACRO_DATE" Precision="0" />
+          <Property Type="String" Name="LABWORKERHEBREW_NAME" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RECEIVED_ON" Precision="0" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -14796,24 +14787,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HISTOLOGY_BLOCK_LIST">
-            <EntityTypeMapping TypeName="Model.HISTOLOGY_BLOCK_LIST">
-              <MappingFragment StoreEntitySet="HISTOLOGY_BLOCK_LIST">
-                <ScalarProperty Name="BASKET_DESC" ColumnName="BASKET_DESC" />
-                <ScalarProperty Name="LABORANT_NAME" ColumnName="LABORANT_NAME" />
-                <ScalarProperty Name="RECEIVED_ON" ColumnName="RECEIVED_ON" />
-                <ScalarProperty Name="ALIQUOT_ID" ColumnName="ALIQUOT_ID" />
-                <ScalarProperty Name="ALIQ_STATUS" ColumnName="ALIQ_STATUS" />
-                <ScalarProperty Name="U_LAST_LABORANT" ColumnName="U_LAST_LABORANT" />
-                <ScalarProperty Name="MACRO_DATE" ColumnName="MACRO_DATE" />
-                <ScalarProperty Name="U_ALIQUOT_STATION" ColumnName="U_ALIQUOT_STATION" />
-                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
-                <ScalarProperty Name="ALIQ_NAME" ColumnName="ALIQ_NAME" />
-                <ScalarProperty Name="U_BASKET" ColumnName="U_BASKET" />
-                <ScalarProperty Name="SDG_ID" ColumnName="SDG_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="SDG_LOG_CYTOLOGY">
             <EntityTypeMapping TypeName="Model.SDG_LOG_CYTOLOGY">
               <MappingFragment StoreEntitySet="SDG_LOG_CYTOLOGY">
@@ -14826,6 +14799,21 @@
                 <ScalarProperty Name="LAST_APPLICATION_CODE" ColumnName="LAST_APPLICATION_CODE" />
                 <ScalarProperty Name="U_PATHOLAB_NUMBER" ColumnName="U_PATHOLAB_NUMBER" />
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="SDG_ID" ColumnName="SDG_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HISTOLOGY_BLOCK_LIST">
+            <EntityTypeMapping TypeName="Model.HISTOLOGY_BLOCK_LIST">
+              <MappingFragment StoreEntitySet="HISTOLOGY_BLOCK_LIST">
+                <ScalarProperty Name="RECEIVED_ON" ColumnName="RECEIVED_ON" />
+                <ScalarProperty Name="LABWORKERHEBREW_NAME" ColumnName="LABWORKERHEBREW_NAME" />
+                <ScalarProperty Name="MACRO_DATE" ColumnName="MACRO_DATE" />
+                <ScalarProperty Name="ALIQUOT_STATION" ColumnName="ALIQUOT_STATION" />
+                <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+                <ScalarProperty Name="U_BASKET" ColumnName="U_BASKET" />
+                <ScalarProperty Name="ALIQ_NAME" ColumnName="ALIQ_NAME" />
+                <ScalarProperty Name="ALIQUOT_ID" ColumnName="ALIQUOT_ID" />
                 <ScalarProperty Name="SDG_ID" ColumnName="SDG_ID" />
               </MappingFragment>
             </EntityTypeMapping>

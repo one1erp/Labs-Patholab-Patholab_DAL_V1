@@ -127,7 +127,7 @@ namespace Patholab_DAL_V1
         public DbSet<U_CYTO_PRINT_CONTROL_USER> U_CYTO_PRINT_CONTROL_USER { get; set; }
         public DbSet<EXTRA_CELL_BLOCK> EXTRA_CELL_BLOCK { get; set; }
         public DbSet<EXTRA_PAP_DILUTION> EXTRA_PAP_DILUTION { get; set; }
-        public DbSet<HISTOLOGY_BLOCK_LIST> HISTOLOGY_BLOCK_LIST { get; set; }
         public DbSet<SDG_LOG_CYTOLOGY> SDG_LOG_CYTOLOGY { get; set; }
+        public DbSet<HISTOLOGY_BLOCK_LIST> HISTOLOGY_BLOCK_LIST { get; set; }
     }
 }
