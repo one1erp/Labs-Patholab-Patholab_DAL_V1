@@ -10,9 +10,8 @@ using Oracle.ManagedDataAccess.Types;
 using Patholab_Common;
 using Patholab_DAL_V1.Logic;
 using Patholab_DAL_V1.Packages;
-using OracleCommand = Oracle.ManagedDataAccess.Client.OracleCommand;
-using OracleConnection = Oracle.ManagedDataAccess.Client.OracleConnection;
 using System.Reflection.Emit;
+using System.Diagnostics;
 
 namespace Patholab_DAL_V1
 {
@@ -55,28 +54,51 @@ namespace Patholab_DAL_V1
             }
         }
 
-        public List<T> FetchDataFromDB<T>( string query, Func<OracleDataReader, T> mapFunc)
+        public List<T> FetchDataFromDB<T>(OracleConnection oraCon, string query, Func<OracleDataReader, T> mapFunc)
         {
-            List<T> result = new List<T>();
+            List<T> results = new List<T>();
 
-            var connection = GetOracleConnection(_ntlsCon);
+            #region  Sample calling format
 
-            using (OracleCommand command = connection.CreateCommand())
+            //    List<SpecificSdgLogRow> rowsFromDB = _dal.FetchDataFromDB(query, reader =>
+            //    {
+            //        return new SpecificSdgLogRow
+            //        {
+            //            SdgId = Convert.ToInt32(reader[0]),
+            //            Time = Convert.ToDateTime(reader[1]),
+            //            Description = reader[2].ToString(),
+            //            Info = reader[3].ToString()
+            //        };
+            //    });
+
+            #endregion
+
+            try
             {
-                command.CommandText = query;
 
-                using (OracleDataReader reader = command.ExecuteReader())
+                using (OracleCommand command = oraCon.CreateCommand())
                 {
-                    while (reader.Read())
+                    command.CommandText = query;
+
+                    using (OracleDataReader reader = command.ExecuteReader())
                     {
-                        T item = mapFunc(reader);
-                        result.Add(item);
+                        while (reader.Read())
+                        {
+                            T item = mapFunc(reader);
+                            results.Add(item);
+                        }
                     }
                 }
-            }
 
-            return result;
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("DB ERROR " + ex.Message);
+            }
+            return results;
+
         }
+
         public OracleConnection GetOracleConnection(INautilusDBConnection ntlsCon)
         {
             OracleConnection connection = null;
@@ -100,38 +122,55 @@ namespace Patholab_DAL_V1
                         cs += splitted[i] + ';';
                     }
 
+                    
                     // Get the username from the provided interface
                     var username = ntlsCon.GetUsername();
+
+                    System.Windows.Forms.MessageBox.Show(username);
+
 
                     // If username is empty, construct a new connection string with default user
                     if (string.IsNullOrEmpty(username))
                     {
                         var serverDetails = ntlsCon.GetServerDetails();
+                        System.Windows.Forms.MessageBox.Show(serverDetails);
                         cs = "User Id=/;Data Source=" + serverDetails + ";";
                     }
 
                     // Create a new Oracle connection using the prepared connection string
                     connection = new OracleConnection(cs);
 
+                    System.Windows.Forms.MessageBox.Show(cs);
+
                     // Open the connection to the Oracle database
                     connection.Open();
+
+                    System.Windows.Forms.MessageBox.Show("7");
+
 
                     // Get the LIMS user password from the provided interface
                     string limsUserPassword = ntlsCon.GetLimsUserPwd();
 
+
                     // Determine the SQL command to set the role based on the presence of LIMS user password
                     string roleCommand = string.IsNullOrEmpty(limsUserPassword) ? "set role lims_user" : "set role lims_user identified by " + limsUserPassword;
 
+
                     // Execute the role-setting command on the Oracle connection
                     OracleCommand command = new OracleCommand(roleCommand, connection);
+
                     command.ExecuteNonQuery();
 
                     // Get the session ID from the provided interface
                     double _session_id = ntlsCon.GetSessionId();
+
                     // Prepare and execute the SQL command to connect to the specified session
                     string sSql = string.Format("call lims.lims_env.connect_same_session({0})", _session_id);
                     command = new OracleCommand(sSql, connection);
                     command.ExecuteNonQuery();
+
+                    System.Windows.Forms.MessageBox.Show("13");
+
                 }
                 catch (Exception e)
                 {
@@ -144,6 +183,8 @@ namespace Patholab_DAL_V1
             return connection;
         }
 
+
+
         public OracleConnection GetOracleConnection()
         {
 
@@ -153,7 +194,7 @@ namespace Patholab_DAL_V1
 
         public void Connect(INautilusDBConnection nautilusDbConnection)
         {
-           
+
 
             this._ntlsCon = nautilusDbConnection;
             if (_ntlsCon.GetUsername() == "ashi")
