@@ -54,7 +54,7 @@ namespace Patholab_DAL_V1
             }
         }
 
-        public List<T> FetchDataFromDB<T>(OracleConnection oraCon, string query, Func<OracleDataReader, T> mapFunc)
+        public List<T> FetchDataFromDB<T>(string query, Func<OracleDataReader, T> mapFunc)
         {
             List<T> results = new List<T>();
 
@@ -75,6 +75,7 @@ namespace Patholab_DAL_V1
 
             try
             {
+                var oraCon = GetOracleConnection(_ntlsCon);
 
                 using (OracleCommand command = oraCon.CreateCommand())
                 {
@@ -126,26 +127,22 @@ namespace Patholab_DAL_V1
                     // Get the username from the provided interface
                     var username = ntlsCon.GetUsername();
 
-                    System.Windows.Forms.MessageBox.Show(username);
-
+   
 
                     // If username is empty, construct a new connection string with default user
                     if (string.IsNullOrEmpty(username))
                     {
                         var serverDetails = ntlsCon.GetServerDetails();
-                        System.Windows.Forms.MessageBox.Show(serverDetails);
                         cs = "User Id=/;Data Source=" + serverDetails + ";";
                     }
 
                     // Create a new Oracle connection using the prepared connection string
                     connection = new OracleConnection(cs);
 
-                    System.Windows.Forms.MessageBox.Show(cs);
 
                     // Open the connection to the Oracle database
                     connection.Open();
 
-                    System.Windows.Forms.MessageBox.Show("7");
 
 
                     // Get the LIMS user password from the provided interface
@@ -168,8 +165,6 @@ namespace Patholab_DAL_V1
                     string sSql = string.Format("call lims.lims_env.connect_same_session({0})", _session_id);
                     command = new OracleCommand(sSql, connection);
                     command.ExecuteNonQuery();
-
-                    System.Windows.Forms.MessageBox.Show("13");
 
                 }
                 catch (Exception e)
