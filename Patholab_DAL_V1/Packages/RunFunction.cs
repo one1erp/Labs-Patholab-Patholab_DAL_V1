@@ -8,8 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 //using OracleCommand = Oracle.DataAccess.Client.OracleCommand;
 //using OracleConnection = Oracle.DataAccess.Client.OracleConnection;
-using OracleCommand = Oracle.ManagedDataAccess.Client.OracleCommand;
-using OracleConnection = Oracle.ManagedDataAccess.Client.OracleConnection;
+using OracleCommand = Oracle.DataAccess.Client.OracleCommand;
+using OracleConnection = Oracle.DataAccess.Client.OracleConnection;
 using Patholab_Common;
 
 namespace Patholab_DAL_V1.Packages
@@ -30,6 +30,7 @@ namespace Patholab_DAL_V1.Packages
 
         internal static decimal? Run_Get_Price(Entities context, long p_customer_id, long p_parts_id)
         {
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                 var res = context.Database.SqlQuery<decimal?>(" select  LIMS.Get_Price(" + p_customer_id + "," + p_parts_id + ") from dual ");
@@ -42,9 +43,11 @@ namespace Patholab_DAL_V1.Packages
             {
                 return null;
             }
+#pragma warning restore CS0168 // Variable is declared but never used
         }
         internal static decimal? Run_Get_Price_Urgent(Entities context, long p_customer_id, long p_parts_id)
         {
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                 var res = context.Database.SqlQuery<decimal?>(" select  LIMS.Get_Price_Urgent(" + p_customer_id + "," + p_parts_id + ") from dual ");
@@ -57,6 +60,7 @@ namespace Patholab_DAL_V1.Packages
             {
                 return null;
             }
+#pragma warning restore CS0168 // Variable is declared but never used
         }
         internal static bool Run_CheckId(Entities context, string id)
         {
@@ -73,7 +77,9 @@ namespace Patholab_DAL_V1.Packages
             return res.SingleOrDefault() != null && res.Single() == "TRUE";
 
 
+#pragma warning disable CS0162 // Unreachable code detected
             return false;
+#pragma warning restore CS0162 // Unreachable code detected
         }
         internal static string OTHER_SDG_FOR_PATIENT(Entities context, string id)
         {
@@ -88,7 +94,9 @@ namespace Patholab_DAL_V1.Packages
             return res.SingleOrDefault();
 
 
+#pragma warning disable CS0162 // Unreachable code detected
             return null;
+#pragma warning restore CS0162 // Unreachable code detected
         }
 
         internal static decimal Run_PATHOLAB_SYNTAX(Entities context, long customerId, string dpt)
@@ -98,6 +106,7 @@ namespace Patholab_DAL_V1.Packages
             {
                 return 0;
             }
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                 string sql = "select LIMS.PATHOLAB_SYNTAX (" + customerId + ",'" + dpt + "') from dual ";
@@ -111,6 +120,7 @@ namespace Patholab_DAL_V1.Packages
                 return 0;
 
             }
+#pragma warning restore CS0168 // Variable is declared but never used
         }
 
         internal static decimal GetNewId(Entities context, string sequenceName)
@@ -170,6 +180,7 @@ namespace Patholab_DAL_V1.Packages
 
         internal static dynamic RunQuery(Entities context, string query)
         {
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
 
@@ -179,9 +190,11 @@ namespace Patholab_DAL_V1.Packages
             {
                 return false;
             }
+#pragma warning restore CS0168 // Variable is declared but never used
         }
         internal static IEnumerable<string> GetDynamicList(Entities context, string query)
         {
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
 
@@ -193,6 +206,7 @@ namespace Patholab_DAL_V1.Packages
                 return null;
 
             }
+#pragma warning restore CS0168 // Variable is declared but never used
         }
         internal static string GetDynamicStr(Entities context, string sql)
         {
@@ -211,6 +225,7 @@ namespace Patholab_DAL_V1.Packages
         }
         internal static decimal? GetDynamicDecimal(Entities context, string sql)
         {
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
 
@@ -222,9 +237,11 @@ namespace Patholab_DAL_V1.Packages
                 return null;
 
             }
+#pragma warning restore CS0168 // Variable is declared but never used
         }
         internal static string ExecuteScalar(Entities context, string query)
         {
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
 
@@ -236,6 +253,7 @@ namespace Patholab_DAL_V1.Packages
             {
                 return "";
             }
+#pragma warning restore CS0168 // Variable is declared but never used
         }
 
         internal static List<ObjDetails> GetObjDetailses(Entities context, string tableName, string condition)

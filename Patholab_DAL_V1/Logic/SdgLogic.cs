@@ -12,6 +12,7 @@ namespace Patholab_DAL_V1.Logic
         public static string GeneratePatholabNumber(Entities context, SDG_USER newSDg)
         {
             //In case of SDG already exists
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                 var Departmen = newSDg.SDG.NAME[0];
@@ -56,6 +57,7 @@ namespace Patholab_DAL_V1.Logic
             {
                 return "0";
             }
+#pragma warning restore CS0168 // Variable is declared but never used
 
         }
 

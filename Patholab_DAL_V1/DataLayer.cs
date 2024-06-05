@@ -5,13 +5,12 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Data.Entity;
 using LSSERVICEPROVIDERLib;
-using Oracle.ManagedDataAccess.Client;
-using Oracle.ManagedDataAccess.Types;
 using Patholab_Common;
 using Patholab_DAL_V1.Logic;
 using Patholab_DAL_V1.Packages;
 using System.Reflection.Emit;
 using System.Diagnostics;
+using Oracle.ManagedDataAccess.Client;
 
 namespace Patholab_DAL_V1
 {
@@ -24,7 +23,9 @@ namespace Patholab_DAL_V1
         private EntityConnection entityConnection;
         private INautilusDBConnection _ntlsCon;
         private ConnectionsGenerator generator;
+#pragma warning disable CS0169 // The field 'DataLayer._session_id' is never used
         double _session_id;
+#pragma warning restore CS0169 // The field 'DataLayer._session_id' is never used
 
         public DataLayer(bool debug = false)
         {
@@ -37,6 +38,7 @@ namespace Patholab_DAL_V1
         }
         public void OpenListener()
         {
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
 
@@ -52,6 +54,7 @@ namespace Patholab_DAL_V1
 
 
             }
+#pragma warning restore CS0168 // Variable is declared but never used
         }
 
         public List<T> FetchDataFromDB<T>(string query, Func<OracleDataReader, T> mapFunc)
@@ -270,8 +273,12 @@ namespace Patholab_DAL_V1
         public void MockConnect()
         {
             //   OpenListener();
+#pragma warning disable CS0219 // Variable is assigned but its value is never used
             string csONE1 = "metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=\" Oracle.DataAccess.Client\";provider connection string=\"Data Source=PATHOLAB;User ID=Ashi;Password=aa\"";
+#pragma warning restore CS0219 // Variable is assigned but its value is never used
+#pragma warning disable CS0219 // Variable is assigned but its value is never used
             string csPATHO = "metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=\" Oracle.DataAccess.Client\";provider connection string=\"Data Source=LIMSPROD;User ID=lims_sys;Password=lims_sys\"";
+#pragma warning restore CS0219 // Variable is assigned but its value is never used
 
             string csnaut94 = "metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=\" Oracle.DataAccess.Client\";provider connection string=\"Data Source=naut;User ID=lims_sys;Password=lims_sys\"";
             //csPATHO

@@ -9,6 +9,7 @@ namespace Patholab_DAL_V1.Logic
     {
         internal static bool InsertToSdgLog(Entities context, long SdgId, string applicationCode, long sessionId, string Description)
         {
+#pragma warning disable CS0168 // Variable is declared but never used
             try
             {
                
@@ -29,6 +30,7 @@ namespace Patholab_DAL_V1.Logic
             {
                 return false;
             }
+#pragma warning restore CS0168 // Variable is declared but never used
         }
     }
 }

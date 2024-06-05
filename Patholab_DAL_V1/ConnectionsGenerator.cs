@@ -1,27 +1,18 @@
-﻿using System.Configuration;
-using System.Data.Common;
-using System.Data.Mapping;
-using System.Data.Metadata.Edm;
-using System.Reflection;
-using System.Xml;
-using System.Xml.Linq;
-using LSSERVICEPROVIDERLib;
-
+﻿using LSSERVICEPROVIDERLib;
+using Oracle.ManagedDataAccess.Client;
+using Patholab_Common;
 //using Oracle.ManagedDataAccess.Client;
 
 using System;
-using System.Collections.Generic;
+using System.Configuration;
+using System.Data.Common;
 using System.Data.EntityClient;
-using System.Data.SqlClient;
+using System.Data.Mapping;
+using System.Data.Metadata.Edm;
 using System.Linq;
-using System.Text;
-using Oracle.ManagedDataAccess.Client;
-using Oracle.ManagedDataAccess.Types;
-using System.Diagnostics;
-
-//using Oracle.DataAccess.Client;
-
-using Patholab_Common;
+using System.Reflection;
+using System.Xml;
+using System.Xml.Linq;
 
 
 namespace Patholab_DAL_V1
@@ -35,7 +26,9 @@ namespace Patholab_DAL_V1
         static string providerS;
         string provider;
         public string _adoConString;
+#pragma warning disable CS0649 // Field 'ConnectionsGenerator._nautilusDbConnection' is never assigned to, and will always have its default value null
         private readonly INautilusDBConnection _nautilusDbConnection;
+#pragma warning restore CS0649 // Field 'ConnectionsGenerator._nautilusDbConnection' is never assigned to, and will always have its default value null
         public ConnectionsGenerator(INautilusDBConnection ntlsCon)
         {
 
