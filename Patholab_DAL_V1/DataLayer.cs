@@ -11,6 +11,9 @@ using Patholab_DAL_V1.Packages;
 using System.Reflection.Emit;
 using System.Diagnostics;
 using Oracle.ManagedDataAccess.Client;
+using System.Configuration;
+using System.Reflection;
+using System.Data;
 
 namespace Patholab_DAL_V1
 {
@@ -23,9 +26,8 @@ namespace Patholab_DAL_V1
         private EntityConnection entityConnection;
         private INautilusDBConnection _ntlsCon;
         private ConnectionsGenerator generator;
-#pragma warning disable CS0169 // The field 'DataLayer._session_id' is never used
+
         double _session_id;
-#pragma warning restore CS0169 // The field 'DataLayer._session_id' is never used
 
         public DataLayer(bool debug = false)
         {
@@ -38,23 +40,17 @@ namespace Patholab_DAL_V1
         }
         public void OpenListener()
         {
-#pragma warning disable CS0168 // Variable is declared but never used
+
             try
             {
 
-
-                // Enable Tracing queries
-                //     Clutch.Diagnostics.EntityFramework.DbTracing.Enable ( );
-                // Adding the listener (implementation of IDbTracingListener)
-                //    Clutch.Diagnostics.EntityFramework.DbTracing.AddListener (
-                //    new Packages.DbTracingListener ( ) );// IDbTracingListener()); 
             }
             catch (Exception xx)
             {
 
 
             }
-#pragma warning restore CS0168 // Variable is declared but never used
+
         }
 
         public List<T> FetchDataFromDB<T>(string query, Func<OracleDataReader, T> mapFunc)
@@ -102,6 +98,7 @@ namespace Patholab_DAL_V1
             return results;
 
         }
+
 
         public OracleConnection GetOracleConnection(INautilusDBConnection ntlsCon)
         {
@@ -178,6 +175,11 @@ namespace Patholab_DAL_V1
 
             }
 
+            if(connection == null)
+            {
+                connection = new OracleConnection("data source=NAUT;password=lims_sys;user id=lims_sys");
+                connection.Open();
+            }
             return connection;
         }
 
@@ -393,10 +395,6 @@ namespace Patholab_DAL_V1
             {
                 context.Database.Connection.Close();
 
-                //ashi 15.8.18
-                //      ????Check it again if helps for leaking memory
-                //context.Dispose();
-                //  context = null;
             }
             catch (Exception e)
             {
@@ -443,21 +441,6 @@ namespace Patholab_DAL_V1
         public U_EXTRA_REQUEST_DATA Ex_Req_Logic(long sdgId, string entityName,
             Enums.ExtraRequestType exRequestType, long createdByOperator, string reqDet, string remarks)
         {
-
-            #region כרגע לא מממשים רשומה אחת לכל דרישה
-
-            //   var sdgHasRequests = FindBy<U_EXTRA_REQUEST_USER>(x => x.U_SDG_ID == sdgId).FirstOrDefault();
-            //   if (sdgHasRequests == null)
-            //   {
-            // the current sdg with sdgId has no Extra Request, hence we need to add U_EXTRA_REQUEST in addition to U_EXTRA_REQUEST_DATA
-            //     }
-            //     else
-            //     {
-            // the current sdg with sdgId has Extra Request already, hence we need to add only U_EXTRA_REQUEST_DATA with the same U_EXTRA_REQUEST_ID of the parent U_EXTRA_REQUEST
-
-            //    parentId = sdgHasRequests.U_EXTRA_REQUEST_ID;
-            //     }
-            #endregion
 
             string requestReason = ExtraRequestLogic.GetReason(exRequestType);
 
@@ -830,6 +813,19 @@ namespace Patholab_DAL_V1
         public void InsertToSdgLog(long sdgId, string v1, double v2, string v3)
         {
             throw new NotImplementedException();
+        }
+
+        public Configuration GetLocalConfigFile(string assemblyPath)
+        {
+            //The method gets assemblyPath and returns it's Configuration.
+            //Should get:
+            //string assemblyPath = Assembly.GetExecutingAssembly().Location;
+
+            ExeConfigurationFileMap map = new ExeConfigurationFileMap
+            {
+                ExeConfigFilename = assemblyPath + ".config"
+            };
+            return ConfigurationManager.OpenMappedExeConfiguration(map, ConfigurationUserLevel.None);
         }
     }
 }
