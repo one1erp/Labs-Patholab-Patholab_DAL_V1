@@ -17,6 +17,22 @@ using System.Data;
 
 namespace Patholab_DAL_V1
 {
+    public static class DataReaderExtensions
+    {
+        public static bool HasColumn(this IDataRecord reader, string columnName)
+        {
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                if (reader.GetName(i).Equals(columnName, StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }
+            Logger.WriteExceptionToLog($"Column '{columnName}' is missing in the query result.");
+            throw new Exception();
+        }
+    }
+
     public class DataLayer
     {
 
@@ -53,6 +69,9 @@ namespace Patholab_DAL_V1
 
         }
 
+
+
+
         public List<T> FetchDataFromDB<T>(string query, Func<OracleDataReader, T> mapFunc)
         {
             List<T> results = new List<T>();
@@ -76,16 +95,19 @@ namespace Patholab_DAL_V1
             {
                 var oraCon = GetOracleConnection(_ntlsCon);
 
-                using (OracleCommand command = oraCon.CreateCommand())
+                using (oraCon)
                 {
-                    command.CommandText = query;
-
-                    using (OracleDataReader reader = command.ExecuteReader())
+                    using (OracleCommand command = oraCon.CreateCommand())
                     {
-                        while (reader.Read())
+                        command.CommandText = query;
+
+                        using (OracleDataReader reader = command.ExecuteReader())
                         {
-                            T item = mapFunc(reader);
-                            results.Add(item);
+                            while (reader.Read())
+                            {
+                                T item = mapFunc(reader);
+                                results.Add(item);
+                            }
                         }
                     }
                 }
@@ -94,6 +116,8 @@ namespace Patholab_DAL_V1
             catch (Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show("DB ERROR " + ex.Message);
+                Logger.WriteExceptionToLog(ex);
+                Logger.WriteExceptionToLog($"query: {query}");
             }
             return results;
 

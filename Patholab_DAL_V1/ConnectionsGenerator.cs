@@ -55,7 +55,6 @@ namespace Patholab_DAL_V1
                 || Environment.MachineName == "ONE1PC2269" || Environment.MachineName == "ONE1PC2643" || Environment.MachineName == "ONE1PC2619")
             {
                 ManagedProvider = false;
-                Logger.WriteLogFile("MangedProvider is false");
             }
 
 
