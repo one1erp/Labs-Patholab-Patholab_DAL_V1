@@ -12,49 +12,36 @@ namespace Patholab_DAL_V1
     using System;
     using System.Collections.Generic;
     
-    public partial class PATHOLOG_WORKLIST
+    public partial class PATHOLOG_WORKLIST_SHORT
     {
         public long SDG_ID { get; set; }
         public Nullable<decimal> ROW_NUM { get; set; }
         public string HAS_REMARKS { get; set; }
         public string HAS_MULTIPLE { get; set; }
         public string HAS_SECOND_INSPECTION { get; set; }
+        public string HAS_RESCAN_SHORT { get; set; }
+        public string HAS_FINISH_RESCAN_SHORT { get; set; }
+        public string HAS_EXTRA_MATERIAL_SHORT { get; set; }
+        public string HAS_FINISH_EXTRA_MATERIAL_SHORT { get; set; }
+        public string HAS_COLORS_SHORT { get; set; }
+        public string HAS_FINISH_COLORS_SHORT { get; set; }
+        public string HAS_FINISH_ADVISE_SHORT { get; set; }
         public Nullable<decimal> U_PRIORITY { get; set; }
         public string SDGNAME { get; set; }
         public Nullable<System.DateTime> U_SEND_ON { get; set; }
         public Nullable<long> U_PATHOLOG { get; set; }
+        public string PATHOLOG_NAME { get; set; }
         public string U_PATHOLAB_NUMBER { get; set; }
         public string REVISION { get; set; }
         public string IS_ADVISOR { get; set; }
+        public string ADVISOROPERATOR { get; set; }
         public string DIAGNOSIS { get; set; }
         public string ORGANS { get; set; }
         public Nullable<decimal> NUM_OF_BLOCKS { get; set; }
         public Nullable<decimal> NUM_OF_COLORS { get; set; }
+        public string HAS_SLIDES_SCANED { get; set; }
         public string COLORS { get; set; }
-        public string ADVISOROPERATOR { get; set; }
-        public Nullable<decimal> U_GLASS_TYPE { get; set; }
-        public string PATHOLOG_NAME { get; set; }
         public Nullable<decimal> U_WEEK_NBR { get; set; }
-        public string HAS_FINISH_ADVISE { get; set; }
-        public string HAS_COLORS { get; set; }
-        public string HAS_FINISH_COLORS { get; set; }
-        public string HAS_EXTRA_MATERIAL { get; set; }
-        public string HAS_FINISH_EXTRA_MATERIAL { get; set; }
-        public string HAS_RESCAN { get; set; }
-        public string HAS_FINISH_RESCAN { get; set; }
-        public string PATHOLOG_FULL_NAME { get; set; }
-        public string IS_DIGITAL { get; set; }
-        public string SDGSTATUS { get; set; }
-        public Nullable<System.DateTime> SCANNED_ON { get; set; }
-        public string REMARKSREQUESTS { get; set; }
-        public string PRIO_TXT { get; set; }
-        public Nullable<decimal> UNSCANNED_SLIDES_NUMBER { get; set; }
-        public Nullable<decimal> EMPTY_BLOCKS_NUMBER { get; set; }
-        public string U_PDF_PATH { get; set; }
-        public string HAS_ATTACHED_DOCS { get; set; }
-        public string PATIENT_NAME { get; set; }
-        public long OPERATOR_ID { get; set; }
-        public string FIRSTSIGNEDBY { get; set; }
-        public string HAS_SLIDES_SCANNED { get; set; }
+        public Nullable<decimal> U_GLASS_TYPE { get; set; }
     }
 }

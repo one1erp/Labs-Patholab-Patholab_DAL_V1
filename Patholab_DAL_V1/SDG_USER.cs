@@ -67,6 +67,7 @@ namespace Patholab_DAL_V1
         public string U_AUTHORIZE_STATUS { get; set; }
         public string U_CONSULT_DESC { get; set; }
         public Nullable<System.DateTime> U_BACK_FROM_PATHOLOG { get; set; }
+        public Nullable<System.DateTime> U_MACRO_DATE { get; set; }
     
         public virtual CLIENT CLIENT { get; set; }
         public virtual OPERATOR PATHOLOG { get; set; }

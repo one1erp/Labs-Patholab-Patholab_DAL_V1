@@ -12,11 +12,10 @@ namespace Patholab_DAL_V1
     using System;
     using System.Collections.Generic;
     
-    public partial class U_DRIVER_USER
+    public partial class ORA_VW_ASPNET_PROFILES
     {
-        public long U_DRIVER_ID { get; set; }
-        public string U_CODE { get; set; }
-    
-        public virtual U_DRIVER U_DRIVER { get; set; }
+        public System.Guid USERID { get; set; }
+        public System.DateTime LASTUPDATEDDATE { get; set; }
+        public Nullable<decimal> DATASIZE { get; set; }
     }
 }

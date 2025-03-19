@@ -851,5 +851,11 @@ namespace Patholab_DAL_V1
             };
             return ConfigurationManager.OpenMappedExeConfiguration(map, ConfigurationUserLevel.None);
         }
+
+        public List<ALIQUOT> GetSlidesByBlockID(long? blockId)
+        {
+            var af = FindBy<ALIQUOT_FORMULATION>(x => x.PARENT_ALIQUOT_ID == blockId).Select(x=>x.CHILD_ALIQUOT_ID);
+            return FindBy<ALIQUOT>(x => af.Contains(x.ALIQUOT_ID)).ToList();
+        }
     }
 }

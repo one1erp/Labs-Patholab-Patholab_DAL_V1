@@ -129,5 +129,31 @@ namespace Patholab_DAL_V1
         public DbSet<EXTRA_PAP_DILUTION> EXTRA_PAP_DILUTION { get; set; }
         public DbSet<SDG_LOG_CYTOLOGY> SDG_LOG_CYTOLOGY { get; set; }
         public DbSet<HISTOLOGY_BLOCK_LIST> HISTOLOGY_BLOCK_LIST { get; set; }
+        public DbSet<RTF_SAMPLE> RTF_SAMPLE { get; set; }
+        public DbSet<CYTOLOGY_WORKLIST> CYTOLOGY_WORKLIST { get; set; }
+        public DbSet<EX_REQ_WORKLIST_ERR> EX_REQ_WORKLIST_ERR { get; set; }
+        public DbSet<EXTRA_MATRIAL_13_07> EXTRA_MATRIAL_13_07 { get; set; }
+        public DbSet<NAUTILUS_DAINAMIC> NAUTILUS_DAINAMIC { get; set; }
+        public DbSet<ORA_VW_ASPNET_APPLICATIONS> ORA_VW_ASPNET_APPLICATIONS { get; set; }
+        public DbSet<ORA_VW_ASPNET_MEMUSERS> ORA_VW_ASPNET_MEMUSERS { get; set; }
+        public DbSet<ORA_VW_ASPNET_PROFILES> ORA_VW_ASPNET_PROFILES { get; set; }
+        public DbSet<ORA_VW_ASPNET_ROLES> ORA_VW_ASPNET_ROLES { get; set; }
+        public DbSet<ORA_VW_ASPNET_SESSIONS> ORA_VW_ASPNET_SESSIONS { get; set; }
+        public DbSet<ORA_VW_ASPNET_UIR> ORA_VW_ASPNET_UIR { get; set; }
+        public DbSet<ORA_VW_ASPNET_USERS> ORA_VW_ASPNET_USERS { get; set; }
+        public DbSet<PAT_PAYMENT> PAT_PAYMENT { get; set; }
+        public DbSet<PATHOLOG_WORKLIST_SHORT> PATHOLOG_WORKLIST_SHORT { get; set; }
+        public DbSet<SDG_COUNT> SDG_COUNT { get; set; }
+        public DbSet<SDG_SAMPLE_ANALYSIS> SDG_SAMPLE_ANALYSIS { get; set; }
+        public DbSet<SDG_TREE> SDG_TREE { get; set; }
+        public DbSet<V_SDG_CASE_FLAGS> V_SDG_CASE_FLAGS { get; set; }
+        public DbSet<V_SDG_EXTRA_REQUEST> V_SDG_EXTRA_REQUEST { get; set; }
+        public DbSet<V_SDG_MAIN_INFO> V_SDG_MAIN_INFO { get; set; }
+        public DbSet<V_SDG_PATIENT_DIAGNOSIS> V_SDG_PATIENT_DIAGNOSIS { get; set; }
+        public DbSet<V_SDG_SAMPLE_ALIQUOT> V_SDG_SAMPLE_ALIQUOT { get; set; }
+        public DbSet<V_SDG_SCAN_ATTACHMENT> V_SDG_SCAN_ATTACHMENT { get; set; }
+        public DbSet<V_SDG_WHERE_CLAUSE> V_SDG_WHERE_CLAUSE { get; set; }
+        public DbSet<VENTANA> VENTANA { get; set; }
+        public DbSet<VW_CONTROL_SCREEN_SDG_LIST> VW_CONTROL_SCREEN_SDG_LIST { get; set; }
     }
 }

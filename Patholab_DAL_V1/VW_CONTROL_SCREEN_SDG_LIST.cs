@@ -15,14 +15,20 @@ namespace Patholab_DAL_V1
     public partial class VW_CONTROL_SCREEN_SDG_LIST
     {
         public long SDG_ID { get; set; }
+        public string HAS_SCANNED_SLIDES { get; set; }
+        public Nullable<System.DateTime> SCANNED_ON { get; set; }
         public string U_PATHOLAB_NUMBER { get; set; }
-        public Nullable<long> U_PATHOLOG { get; set; }
+        public string PTG_NAME { get; set; }
+        public Nullable<long> PTG_ID { get; set; }
+        public string IS_DIGITAL_PTG { get; set; }
         public Nullable<System.DateTime> U_RECEIVED_ON { get; set; }
         public string PRIO_TXT { get; set; }
         public string ORGANS { get; set; }
-        public Nullable<decimal> SLIDESNUM { get; set; }
         public string HAS_ATTACHED_DOCS { get; set; }
-        public string HAS_SCANNED_SLIDES { get; set; }
+        public Nullable<decimal> SLIDES_NUM { get; set; }
+        public Nullable<decimal> SCANNED_SLIDES_NUM { get; set; }
         public string HAS_CLINICAL_DIAGNOSIS { get; set; }
+        public string DIAGNOSIS { get; set; }
+        public Nullable<decimal> ROW_NUM { get; set; }
     }
 }

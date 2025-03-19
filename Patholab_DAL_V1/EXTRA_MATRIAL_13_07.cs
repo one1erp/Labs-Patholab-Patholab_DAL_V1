@@ -12,22 +12,25 @@ namespace Patholab_DAL_V1
     using System;
     using System.Collections.Generic;
     
-    public partial class EXTRA_SLIDES
+    public partial class EXTRA_MATRIAL_13_07
     {
         public long SDG_ID { get; set; }
+        public string STATUS { get; set; }
         public long REQ_ID { get; set; }
         public string SDG_PATHOLAB_NUMBER { get; set; }
-        public string SLIDE_NUMBER { get; set; }
+        public Nullable<decimal> PRIORITY { get; set; }
+        public Nullable<System.DateTime> CONTAINERRECEIVEDON { get; set; }
+        public string U_REQUEST_DETAILS { get; set; }
         public string PATHOLOG_NAME { get; set; }
-        public Nullable<System.DateTime> REQUEST_CREATED_ON { get; set; }
-        public string REQUEST_DETAILS { get; set; }
+        public Nullable<System.DateTime> REQ_CREATED_ON { get; set; }
+        public string SDG_NAME { get; set; }
+        public string SAMPLE_NAME { get; set; }
+        public string U_SLIDE_NAME { get; set; }
         public string REQUEST_STATUS { get; set; }
+        public string REQUEST_ENTITY_TYPE { get; set; }
         public string REQUEST_TYPE { get; set; }
         public string REQUEST_REMARKS { get; set; }
-        public string CUTTING_LABORANT { get; set; }
-        public Nullable<System.DateTime> CONTAINERRECEIVEDON { get; set; }
-        public string Priority { get; set; }
-        public Nullable<decimal> PRIORITY_NUM { get; set; }
-        public string HAS_I_COLOR_SAME_DATE { get; set; }
+        public string PATHOLOG_MACRO { get; set; }
+        public Nullable<System.DateTime> PATHOLOG_MACRO_TIME { get; set; }
     }
 }

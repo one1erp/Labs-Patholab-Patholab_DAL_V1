@@ -50,6 +50,9 @@ namespace Patholab_DAL_V1
         public string U_PATHOLAB_SAMPLE_NAME { get; set; }
         public Nullable<decimal> U_TUMOR_SIZE { get; set; }
         public string U_ASSUTA_NUMBER { get; set; }
+        public string U_MACROPERSAMPLE { get; set; }
+        public string U_MACRO_PER_SAMPLE { get; set; }
+        public string U_MACRO { get; set; }
     
         public virtual SAMPLE SAMPLE { get; set; }
     }

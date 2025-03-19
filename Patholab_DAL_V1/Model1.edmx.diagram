@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dfb89f393e7742eda0bbea7a9fd6febf" Name="Diagram1" ZoomLevel="109">
+      <Diagram DiagramId="dfb89f393e7742eda0bbea7a9fd6febf" Name="Diagram1" ZoomLevel="64">
         <EntityTypeShape EntityType="Model.ADDRESS" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.ALIQUOT" Width="1.5" PointX="11.25" PointY="51.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.ALIQUOT_USER" Width="1.5" PointX="16.5" PointY="49.125" />
@@ -354,6 +354,32 @@
         <EntityTypeShape EntityType="Model.EXTRA_PAP_DILUTION" Width="3.125" PointX="8.25" PointY="11.625" />
         <EntityTypeShape EntityType="Model.SDG_LOG_CYTOLOGY" Width="1.5" PointX="1.6793237392228675" PointY="9.3958073600175833" />
         <EntityTypeShape EntityType="Model.HISTOLOGY_BLOCK_LIST" Width="4.5" PointX="9" PointY="153" />
+        <EntityTypeShape EntityType="Model.RTF_SAMPLE" Width="1.5" PointX="3.6065570617125169" PointY="17.917863079308468" />
+        <EntityTypeShape EntityType="Model.CYTOLOGY_WORKLIST" Width="1.5" PointX="1.9725889852142839" PointY="7.8806255645494092" />
+        <EntityTypeShape EntityType="Model.EX_REQ_WORKLIST_ERR" Width="1.5" PointX="6.2188048130920182" PointY="28.015518544249012" />
+        <EntityTypeShape EntityType="Model.EXTRA_MATRIAL_13_07" Width="1.5" PointX="3.75517588283642" PointY="19.510263660694594" />
+        <EntityTypeShape EntityType="Model.NAUTILUS_DAINAMIC" Width="1.5" PointX="2.8468169043058609" PointY="16.937308945198222" />
+        <EntityTypeShape EntityType="Model.ORA_VW_ASPNET_APPLICATIONS" Width="1.5" PointX="0.93202108001896233" PointY="29.850699244928872" />
+        <EntityTypeShape EntityType="Model.ORA_VW_ASPNET_MEMUSERS" Width="1.5" PointX="3.5767694877352421" PointY="14.754145196990178" />
+        <EntityTypeShape EntityType="Model.ORA_VW_ASPNET_PROFILES" Width="1.5" PointX="1.8163598430419152" PointY="7.6996134406419534" />
+        <EntityTypeShape EntityType="Model.ORA_VW_ASPNET_ROLES" Width="1.5" PointX="6.9945890954670444" PointY="16.985873811406023" />
+        <EntityTypeShape EntityType="Model.ORA_VW_ASPNET_SESSIONS" Width="1.5" PointX="1.3936121693782564" PointY="24.270572032905449" />
+        <EntityTypeShape EntityType="Model.ORA_VW_ASPNET_UIR" Width="1.5" PointX="3.5853711308843321" PointY="14.214689559403197" />
+        <EntityTypeShape EntityType="Model.ORA_VW_ASPNET_USERS" Width="1.5" PointX="4.0969761759494325" PointY="30.97885969233646" />
+        <EntityTypeShape EntityType="Model.PAT_PAYMENT" Width="1.5" PointX="11.97125264255854" PointY="17.296782516546912" />
+        <EntityTypeShape EntityType="Model.PATHOLOG_WORKLIST_SHORT" Width="1.5" PointX="0.81171266213604842" PointY="1.702835828858817" />
+        <EntityTypeShape EntityType="Model.SDG_COUNT" Width="1.5" PointX="5.9394371816606437" PointY="24.643764626534548" />
+        <EntityTypeShape EntityType="Model.SDG_SAMPLE_ANALYSIS" Width="1.5" PointX="4.5346858373538987" PointY="25.048755225282513" />
+        <EntityTypeShape EntityType="Model.SDG_TREE" Width="1.5" PointX="9.7744629577614646" PointY="8.1351618953678582" />
+        <EntityTypeShape EntityType="Model.V_SDG_CASE_FLAGS" Width="1.5" PointX="8.2816131619185285" PointY="28.171983553176737" />
+        <EntityTypeShape EntityType="Model.V_SDG_EXTRA_REQUEST" Width="1.5" PointX="10.182550436902115" PointY="24.8777784522985" />
+        <EntityTypeShape EntityType="Model.V_SDG_MAIN_INFO" Width="1.5" PointX="2.8324996022658886" PointY="23.518855716809096" />
+        <EntityTypeShape EntityType="Model.V_SDG_PATIENT_DIAGNOSIS" Width="1.5" PointX="4.6528315789312273" PointY="8.513489607960679" />
+        <EntityTypeShape EntityType="Model.V_SDG_SAMPLE_ALIQUOT" Width="1.5" PointX="9.8529835035339843" PointY="0.82002490797081262" />
+        <EntityTypeShape EntityType="Model.V_SDG_SCAN_ATTACHMENT" Width="1.5" PointX="6.0976616861753445" PointY="9.2045037044233187" />
+        <EntityTypeShape EntityType="Model.V_SDG_WHERE_CLAUSE" Width="1.5" PointX="8.0079046674109549" PointY="11.470142369843154" />
+        <EntityTypeShape EntityType="Model.VENTANA" Width="1.5" PointX="0.42464098912879877" PointY="3.6826378124219543" />
+        <EntityTypeShape EntityType="Model.VW_CONTROL_SCREEN_SDG_LIST" Width="1.5" PointX="10.318783565572828" PointY="30.968479126211477" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

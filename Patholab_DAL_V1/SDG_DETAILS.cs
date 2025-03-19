@@ -69,6 +69,6 @@ namespace Patholab_DAL_V1
         public Nullable<System.DateTime> DATE_AUTHORISED { get; set; }
         public Nullable<decimal> EXTRAREQ_COUNT { get; set; }
         public Nullable<decimal> SDGATTACH_COUNT { get; set; }
-        public string u_isConsult { get; set; }
+        public string U_ISCONSULT { get; set; }
     }
 }

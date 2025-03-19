@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Patholab_DAL_V1</RootNamespace>
     <AssemblyName>Patholab_DAL_V1</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -98,6 +98,9 @@
     <Compile Include="CSdg.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="CYTOLOGY_WORKLIST.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataLayer.cs" />
     <Compile Include="Enums\Enums.cs" />
     <Compile Include="EXTRA_CELL_BLOCK.cs">
@@ -106,10 +109,16 @@
     <Compile Include="EXTRA_MATERIAL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="EXTRA_MATRIAL_13_07.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="EXTRA_PAP_DILUTION.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="EXTRA_SLIDES.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EX_REQ_WORKLIST_ERR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="HISTOLOGY_BLOCK_LIST.cs">
@@ -160,6 +169,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="NAUTILUS_DAINAMIC.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="ObjDetails.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -172,6 +184,27 @@
     <Compile Include="OPERATOR_USER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ORA_VW_ASPNET_APPLICATIONS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORA_VW_ASPNET_MEMUSERS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORA_VW_ASPNET_PROFILES.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORA_VW_ASPNET_ROLES.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORA_VW_ASPNET_SESSIONS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORA_VW_ASPNET_UIR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORA_VW_ASPNET_USERS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Packages\DbTracingListener.cs" />
     <Compile Include="Packages\RunFunction.cs" />
     <Compile Include="Partials\ALIQUOT.cs" />
@@ -180,6 +213,12 @@
     <Compile Include="Partials\PHRASE_HEADER.cs" />
     <Compile Include="Partials\SDG.cs" />
     <Compile Include="PATHOLOG_WORKLIST.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PATHOLOG_WORKLIST_SHORT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAT_PAYMENT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="PAYMENT.cs">
@@ -201,6 +240,9 @@
     <Compile Include="RTF_RESULT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="RTF_SAMPLE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="SAMPLE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -213,6 +255,9 @@
     <Compile Include="SDG.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="SDG_COUNT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="SDG_DETAILS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -223,6 +268,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="SDG_RESULTS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SDG_SAMPLE_ANALYSIS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SDG_TREE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="SDG_USER.cs">
@@ -414,6 +465,33 @@
     <Compile Include="U_WREPORT_USER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="VENTANA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VW_CONTROL_SCREEN_SDG_LIST.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_SDG_CASE_FLAGS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_SDG_EXTRA_REQUEST.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_SDG_MAIN_INFO.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_SDG_PATIENT_DIAGNOSIS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_SDG_SAMPLE_ALIQUOT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_SDG_SCAN_ATTACHMENT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="V_SDG_WHERE_CLAUSE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="WORKFLOW.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -454,6 +532,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
