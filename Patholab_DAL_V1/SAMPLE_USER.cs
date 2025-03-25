@@ -53,6 +53,7 @@ namespace Patholab_DAL_V1
         public string U_MACROPERSAMPLE { get; set; }
         public string U_MACRO_PER_SAMPLE { get; set; }
         public string U_MACRO { get; set; }
+        public Nullable<System.DateTime> U_FORMALIN_ENTRY_DATE { get; set; }
     
         public virtual SAMPLE SAMPLE { get; set; }
     }

@@ -2317,6 +2317,7 @@
           <Property Name="U_MACROPERSAMPLE" Type="varchar2" MaxLength="2000" />
           <Property Name="U_MACRO_PER_SAMPLE" Type="varchar2" MaxLength="2000" />
           <Property Name="U_MACRO" Type="varchar2" MaxLength="2000" />
+          <Property Name="U_FORMALIN_ENTRY_DATE" Type="date" />
         </EntityType>
         <EntityType Name="SCHEMA_TABLE">
           <Key>
@@ -3309,6 +3310,7 @@
           <Property Name="U_DEVICE_NAME" Type="varchar2" MaxLength="2000" />
           <Property Name="U_TYPE" Type="varchar2" MaxLength="2000" />
           <Property Name="U_WREPORT_ID" Type="number" Precision="16" />
+          <Property Name="U_RECIPIENT_TYPE" Type="varchar2" MaxLength="30" />
         </EntityType>
         <EntityType Name="U_WREPORT">
           <Key>
@@ -7359,121 +7361,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errors Found During Generation:
-      warning 6013: The table/view 'LIMS.BRING_PATHOLOG_WORKLIST_TEXT' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-      
-      <EntityType Name="BRING_PATHOLOG_WORKLIST_TEXT">
-        <Property Name="TEXT" Type="long" />
-      </EntityType>
-      Errors Found During Generation:
-      warning 6013: The table/view 'LIMS.COUNTER100' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-      
-      <EntityType Name="COUNTER100">
-        <Property Name="NBR" Type="number" />
-      </EntityType>
-      Errors Found During Generation:
-      warning 6013: The table/view 'LIMS.EXTRA_SLIDES_STATUS_P' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-      
-      <EntityType Name="EXTRA_SLIDES_STATUS_P">
-        <Property Name="BLOCKNUMBER" Type="varchar2" MaxLength="14" />
-        <Property Name="EXREQUESTCREATEDON" Type="varchar2" MaxLength="10" />
-      </EntityType>
-      Errors Found During Generation:
-      warning 6013: The table/view 'LIMS.NAUTILUS_STATIC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CNTR' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'D_ID' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'D_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PATHO_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'REFERRAL_DATE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'SDG_CREATED_ON' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'SDG_COMPLETED_ON' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'REQUEST_DATE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'D_STATUS' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PRIORITY' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'HOSPITAL_NUM' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'OBLIGATION_NUM' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'ACCORD_NUM' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLIENT_ID_NUMBER' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLIENT_FIRST_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLIENT_LAST_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLIENT_BIRTH_DATE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PREGNANCY' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PREG_DATE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLIENT_PHONE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLIENT_PHONE2' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLIENT_GENDER' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PASSPORT' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'VISIT_LIST_1' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'ORDR' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'ORDER_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'ORDER_STATUS' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'INC_VAT' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'TOTAL_DEBIT' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'IN_ADVANCE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'SECOND_CUST' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'URGENT' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PART_ID' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST_ID' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST_CODE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PRICE_LIST' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST_LTN_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST_TYPE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST_GRP' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST_LTR_B' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST_LTR_C' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST_LTR_P' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST_VAT' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PAY_TRNS' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'SMALL_TO' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'MEDIUM_TO' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'LARGE_TO' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'LIBRARY' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'DISTRICT' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'GRP_CLINIC_CODE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'FAX' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'MAIL' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLALIT' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'ASCII' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PRICE_LVL' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'SEND_CODED' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'XL_UP_TO' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'SEND_MAIL_OP' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'XXL_UP_TO' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST2_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST2_ID' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CUST2_CODE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'IMP_PHYSICIAN' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'IMP_PHYSICIAN_LICENS' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'IMP_PHYSIAN_DEGREE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'IMP_PHYSICIAN_FIRST_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'IMP_PHYSICIAN_LAST_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'ID_NBR' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'LICENSE_NBR' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PROFICENCY' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'PHY_MAIL' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CODED_LETTER' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'REF_PHYSICIAN' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'REF_PHYSICIAN_LICENS' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'REF_PHYSIAN_DEGREE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'REF_PHYSICIAN_FIRST_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'REF_PHYSICIAN_LAST_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CONTAINER' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CONTAN_ID' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'SAMP_ARIVE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'DATE_ARIVE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'DATE_SND' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CONTAN_FROM' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLINIC' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLINIC_DIST' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLINIC_FAX' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'EX_NUM' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'GRP_CODE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'GRP_NAME' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLINIC_CODE' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      warning 6005: The data type 'undefined' is currently not supported for the target .NET Framework version; the column 'CLINIC_EMAIL' in table 'LIMS.NAUTILUS_STATIC' was excluded.
-      
-      <EntityType Name="NAUTILUS_STATIC" />-->
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -9176,6 +9063,7 @@
           <Property Type="String" Name="U_MACROPERSAMPLE" MaxLength="2000" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="U_MACRO_PER_SAMPLE" MaxLength="2000" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="U_MACRO" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="U_FORMALIN_ENTRY_DATE" />
         </EntityType>
         <EntityType Name="SDG">
           <Key>
@@ -11939,6 +11827,7 @@
           <Property Type="Int64" Name="U_WREPORT_ID" />
           <NavigationProperty Name="U_WRDESTINATION" Relationship="Model.FK_U_WRDESTINATION_USER" FromRole="U_WRDESTINATION_USER" ToRole="U_WRDESTINATION" />
           <NavigationProperty Name="U_WREPORT" Relationship="Model.FK_WRDESTINATION_USER_U_WREPOR" FromRole="U_WRDESTINATION_USER" ToRole="U_WREPORT" />
+          <Property Type="String" Name="U_RECIPIENT_TYPE" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_WRDESTINATION_GROUP_ID">
           <End Type="Model.LIMS_GROUP" Role="LIMS_GROUP" Multiplicity="0..1" />
@@ -14879,6 +14768,7 @@
           <EntitySetMapping Name="SAMPLE_USER">
             <EntityTypeMapping TypeName="Model.SAMPLE_USER">
               <MappingFragment StoreEntitySet="SAMPLE_USER">
+                <ScalarProperty Name="U_FORMALIN_ENTRY_DATE" ColumnName="U_FORMALIN_ENTRY_DATE" />
                 <ScalarProperty Name="U_MACRO" ColumnName="U_MACRO" />
                 <ScalarProperty Name="U_MACRO_PER_SAMPLE" ColumnName="U_MACRO_PER_SAMPLE" />
                 <ScalarProperty Name="U_MACROPERSAMPLE" ColumnName="U_MACROPERSAMPLE" />
@@ -15632,6 +15522,7 @@
           <EntitySetMapping Name="U_WRDESTINATION_USER">
             <EntityTypeMapping TypeName="Model.U_WRDESTINATION_USER">
               <MappingFragment StoreEntitySet="U_WRDESTINATION_USER">
+                <ScalarProperty Name="U_RECIPIENT_TYPE" ColumnName="U_RECIPIENT_TYPE" />
                 <ScalarProperty Name="U_WREPORT_ID" ColumnName="U_WREPORT_ID" />
                 <ScalarProperty Name="U_TYPE" ColumnName="U_TYPE" />
                 <ScalarProperty Name="U_DEVICE_NAME" ColumnName="U_DEVICE_NAME" />

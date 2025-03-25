@@ -19,6 +19,7 @@ namespace Patholab_DAL_V1
         public string U_DEVICE_NAME { get; set; }
         public string U_TYPE { get; set; }
         public Nullable<long> U_WREPORT_ID { get; set; }
+        public string U_RECIPIENT_TYPE { get; set; }
     
         public virtual U_WRDESTINATION U_WRDESTINATION { get; set; }
         public virtual U_WREPORT U_WREPORT { get; set; }
